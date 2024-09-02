@@ -3,1940 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Loan Landing Page</title>
-<style data-emotion="css i9gxme" data-s="">.css-i9gxme{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;}</style>
-      <style data-emotion="css 349cgn-MuiAppBar-root" data-s="">.css-349cgn-MuiAppBar-root{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:static;background-color:#1976d2;color:#fff;}</style>
-      <style data-emotion="css hip9hq-MuiPaper-root-MuiAppBar-root" data-s="">.css-hip9hq-MuiPaper-root-MuiAppBar-root{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:static;background-color:#1976d2;color:#fff;}</style>
-      <style data-emotion="css 4i7700-MuiToolbar-root" data-s="">.css-4i7700-MuiToolbar-root{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-left:16px;padding-right:16px;min-height:56px;margin:152px;margin-top:auto;margin-bottom:auto;}@media (min-width:600px){.css-4i7700-MuiToolbar-root{padding-left:24px;padding-right:24px;}}@media (min-width:0px){@media (orientation: landscape){.css-4i7700-MuiToolbar-root{min-height:48px;}}}@media (min-width:600px){.css-4i7700-MuiToolbar-root{min-height:64px;}}</style>
-      <style data-emotion="css 126j5fe" data-s="">.css-126j5fe{padding-left:50px;padding-right:50px;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;}</style>
-      <style data-emotion="css mhc70k-MuiGrid-root" data-s="">.css-mhc70k-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-16px;width:calc(100% + 16px);margin-left:-16px;}.css-mhc70k-MuiGrid-root>.MuiGrid-item{padding-top:16px;}.css-mhc70k-MuiGrid-root>.MuiGrid-item{padding-left:16px;}</style>
-      <style data-emotion="css 1fyyp8j-MuiGrid-root" data-s="">.css-1fyyp8j-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}@media (min-width:600px){.css-1fyyp8j-MuiGrid-root{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:900px){.css-1fyyp8j-MuiGrid-root{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:50%;}}@media (min-width:1200px){.css-1fyyp8j-MuiGrid-root{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:50%;}}@media (min-width:1536px){.css-1fyyp8j-MuiGrid-root{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:50%;}}</style>
-      <style data-emotion="css 1qd66l1" data-s="">.css-1qd66l1{background-color:#fff;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;padding:8px;text-align:center;color:rgba(0, 0, 0, 0.6);height:195px;border-radius:16px;border:1px solid #E9EFFE;box-shadow:0px 2px 50px 0px #06033A0D;}</style>
-      <style data-emotion="css y6orjk-MuiPaper-root" data-s="">.css-y6orjk-MuiPaper-root{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:4px;box-shadow:0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);background-color:#fff;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;padding:8px;text-align:center;color:rgba(0, 0, 0, 0.6);height:195px;border-radius:16px;border:1px solid #E9EFFE;box-shadow:0px 2px 50px 0px #06033A0D;}</style>
-      <style data-emotion="css 1ebprri" data-s="">.css-1ebprri{margin-top:16px;margin-bottom:16px;}</style>
-      <style data-emotion="css 1oqqzyl-MuiContainer-root" data-s="">.css-1oqqzyl-MuiContainer-root{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;padding-left:16px;padding-right:16px;}@media (min-width:600px){.css-1oqqzyl-MuiContainer-root{padding-left:24px;padding-right:24px;}}@media (min-width:1200px){.css-1oqqzyl-MuiContainer-root{max-width:1200px;}}</style>
-      <style data-emotion="css 1iknwlx-MuiDivider-root" data-s="">.css-1iknwlx-MuiDivider-root{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgba(0, 0, 0, 0.12);border-bottom-width:thin;margin-top:24px;margin-bottom:24px;}</style>
-      <style data-emotion="css 1fo70ae-MuiStack-root" data-s="">.css-1fo70ae-MuiStack-root{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:16px;}</style>
-      <style data-emotion="css 1tk1bks-MuiDivider-root" data-s="">.css-1tk1bks-MuiDivider-root{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgba(0, 0, 0, 0.12);border-bottom-width:0;height:auto;border-right-width:thin;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;}</style>
-      <style data-emotion="css pl8gqh-MuiStack-root" data-s="">.css-pl8gqh-MuiStack-root{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-pl8gqh-MuiStack-root>:not(style):not(style){margin:0;}.css-pl8gqh-MuiStack-root>:not(style)~:not(style){margin-left:16px;}</style>
-      <style data-emotion="css w60cv3-MuiButton-root" data-s="">.css-w60cv3-MuiButton-root{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:6px 8px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#1976d2;}.css-w60cv3-MuiButton-root:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(25, 118, 210, 0.04);}@media (hover: none){.css-w60cv3-MuiButton-root:hover{background-color:transparent;}}.css-w60cv3-MuiButton-root.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style>
-      <style data-emotion="css 1e6y48t-MuiButtonBase-root-MuiButton-root" data-s="">.css-1e6y48t-MuiButtonBase-root-MuiButton-root{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:6px 8px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#1976d2;}.css-1e6y48t-MuiButtonBase-root-MuiButton-root::-moz-focus-inner{border-style:none;}.css-1e6y48t-MuiButtonBase-root-MuiButton-root.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1e6y48t-MuiButtonBase-root-MuiButton-root{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(25, 118, 210, 0.04);}@media (hover: none){.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{background-color:transparent;}}.css-1e6y48t-MuiButtonBase-root-MuiButton-root.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style>
-      <style data-emotion="css 1yl2ad8-MuiGrid-root" data-s="">.css-1yl2ad8-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:50%;}@media (min-width:600px){.css-1yl2ad8-MuiGrid-root{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:50%;}}@media (min-width:900px){.css-1yl2ad8-MuiGrid-root{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:1200px){.css-1yl2ad8-MuiGrid-root{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:1536px){.css-1yl2ad8-MuiGrid-root{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}</style>
-      <style data-emotion="css 1pyfst" data-s="">.css-1pyfst{background-color:#fff;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;padding:8px;text-align:center;color:rgba(0, 0, 0, 0.6);}</style>
-      <style data-emotion="css 1633um2-MuiPaper-root" data-s="">.css-1633um2-MuiPaper-root{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:4px;box-shadow:0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);background-color:#fff;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;padding:8px;text-align:center;color:rgba(0, 0, 0, 0.6);}</style>
-      <style data-emotion="css ohwg9z" data-s="">.css-ohwg9z{position:relative;overflow:hidden;}</style>
-      <style data-emotion="css 1f8sh1y" data-s="">.css-1f8sh1y{position:relative;width:100%;height:100%;}</style>
-      <style data-emotion="css 1l7c0cy" data-s="">.css-1l7c0cy{position:absolute;height:100%;width:100%;}</style>
-      <style data-emotion="css 1238he9-MuiTypography-root" data-s="">.css-1238he9-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;text-align:left;color:#000000;font-weight:700;padding:20px;}</style>
-      <style data-emotion="css yk10cl-MuiDivider-root" data-s="">.css-yk10cl-MuiDivider-root{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgba(0, 0, 0, 0.12);border-bottom-width:thin;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;height:auto;}</style>
-      <style data-emotion="css 1ps6pg7-MuiPaper-root" data-s="">.css-1ps6pg7-MuiPaper-root{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:4px;box-shadow:0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);}</style>
-      <style data-emotion="css bf70px" data-s="">.css-bf70px{background-image:url("/offers/offer1.png");-webkit-background-size:cover;background-size:cover;-webkit-background-position:center;background-position:center;height:27vh;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}</style>
-      <style data-emotion="css ahj2mt-MuiTypography-root" data-s="">.css-ahj2mt-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;}</style>
-      <style data-emotion="css 1li6c34" data-s="">.css-1li6c34{color:#5000A6;font-weight:600;font-size:16px;line-height:20.35px;margin:0 auto;padding-top:36px;}</style>
-      <style data-emotion="css yi9cks-MuiSvgIcon-root" data-s="">.css-yi9cks-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;height:16px;}</style>
-      <style data-emotion="css 1abc02a" data-s="">.css-1abc02a{position:absolute;height:100%;background-color:transparent;z-index:1;top:0;right:0;}.css-1abc02a:hover button{background-color:black;-webkit-filter:brightness(120%);filter:brightness(120%);opacity:0.4;}</style>
-      <style data-emotion="css w34kz5" data-s="">.css-w34kz5{margin:0 10px;position:relative;background-color:#494949;top:calc(50% - 20px)!important;color:white;font-size:30px;-webkit-transition:200ms;transition:200ms;cursor:pointer;opacity:1;}.css-w34kz5:hover{opacity:0.6!important;}</style>
-      <style data-emotion="css 1onx53p-MuiIconButton-root" data-s="">.css-1onx53p-MuiIconButton-root{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;margin:0 10px;position:relative;background-color:#494949;top:calc(50% - 20px)!important;color:white;font-size:30px;-webkit-transition:200ms;transition:200ms;cursor:pointer;opacity:1;}.css-1onx53p-MuiIconButton-root:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1onx53p-MuiIconButton-root:hover{background-color:transparent;}}.css-1onx53p-MuiIconButton-root.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}.css-1onx53p-MuiIconButton-root:hover{opacity:0.6!important;}</style>
-      <style data-emotion="css 1g04gm2-MuiButtonBase-root-MuiIconButton-root" data-s="">.css-1g04gm2-MuiButtonBase-root-MuiIconButton-root{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;margin:0 10px;position:relative;background-color:#494949;top:calc(50% - 20px)!important;color:white;font-size:30px;-webkit-transition:200ms;transition:200ms;cursor:pointer;opacity:1;}.css-1g04gm2-MuiButtonBase-root-MuiIconButton-root::-moz-focus-inner{border-style:none;}.css-1g04gm2-MuiButtonBase-root-MuiIconButton-root.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1g04gm2-MuiButtonBase-root-MuiIconButton-root{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1g04gm2-MuiButtonBase-root-MuiIconButton-root:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1g04gm2-MuiButtonBase-root-MuiIconButton-root:hover{background-color:transparent;}}.css-1g04gm2-MuiButtonBase-root-MuiIconButton-root.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}.css-1g04gm2-MuiButtonBase-root-MuiIconButton-root:hover{opacity:0.6!important;}</style>
-      <style data-emotion="css i4bv87-MuiSvgIcon-root" data-s="">.css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}</style>
-      <style data-emotion="css hn784z" data-s="">.css-hn784z{position:absolute;height:100%;background-color:transparent;z-index:1;top:0;left:0;}.css-hn784z:hover button{background-color:black;-webkit-filter:brightness(120%);filter:brightness(120%);opacity:0.4;}</style>
-      <style data-emotion="css 126j5fe" data-s="">.css-126j5fe{padding-left:50px;padding-right:50px;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;}</style>
-      <style data-emotion="css 13i4rnv-MuiGrid-root" data-s="">.css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}</style>
-      <style data-emotion="css 1pyfst" data-s="">.css-1pyfst{background-color:#fff;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;padding:8px;text-align:center;color:rgba(0, 0, 0, 0.6);}</style>
-      <style data-emotion="css 1633um2-MuiPaper-root" data-s="">.css-1633um2-MuiPaper-root{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:4px;box-shadow:0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);background-color:#fff;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;padding:8px;text-align:center;color:rgba(0, 0, 0, 0.6);}</style>
-      <style data-emotion="css k67b58-MuiTypography-root" data-s="">.css-k67b58-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;text-align:left;color:#000000;font-weight:700;padding:8px;}</style>
-      <style data-emotion="css 1tk1bks-MuiDivider-root" data-s="">.css-1tk1bks-MuiDivider-root{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgba(0, 0, 0, 0.12);border-bottom-width:0;height:auto;border-right-width:thin;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;}</style>
-      <style data-emotion="css yk10cl-MuiDivider-root" data-s="">.css-yk10cl-MuiDivider-root{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgba(0, 0, 0, 0.12);border-bottom-width:thin;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;height:auto;}</style>
-      <style data-emotion="css" data-s="">.css-0{}</style>
-      <style data-emotion="css" data-s="">.css-8je8zh-MuiTouchRipple-root{overflow:hidden;pointer-events:none;position:absolute;z-index:0;top:0;right:0;bottom:0;left:0;border-radius:inherit;}</style>
-      <style data-emotion="css" data-s="">.css-4ja9p7{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;margin-left:120px;}</style>
-      <style data-emotion="css" data-s="">.css-4ja9p7>:not(style)~:not(style){margin-left:16px;}</style>
-      <style data-emotion="css" data-s="">.css-v82cpl{}</style>
-      <style data-emotion="css" data-s="">@media (min-width:900px){.css-v82cpl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}}</style>
-      <style data-emotion="css" data-s="">.css-1wtioh1-MuiIconButton-root{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;padding:12px;font-size:1.75rem;}</style>
-      <style data-emotion="css" data-s="">.css-1wtioh1-MuiIconButton-root:hover{background-color:rgba(0, 0, 0, 0.04);}</style>
-      <style data-emotion="css" data-s="">@media (hover: none){.css-1wtioh1-MuiIconButton-root:hover{background-color:transparent;}}</style>
-      <style data-emotion="css" data-s="">.css-1wtioh1-MuiIconButton-root.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}</style>
-      <style data-emotion="css" data-s="">.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;padding:12px;font-size:1.75rem;}</style>
-      <style data-emotion="css" data-s="">.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root::-moz-focus-inner{border-style:none;}</style>
-      <style data-emotion="css" data-s="">.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root.Mui-disabled{pointer-events:none;cursor:default;}</style>
-      <style data-emotion="css" data-s="">@media print{.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root{-webkit-print-color-adjust:exact;color-adjust:exact;}}</style>
-      <style data-emotion="css" data-s="">.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root:hover{background-color:rgba(0, 0, 0, 0.04);}</style>
-      <style data-emotion="css" data-s="">@media (hover: none){.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root:hover{background-color:transparent;}}</style>
-      <style data-emotion="css" data-s="">.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}</style>
-      <style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple{opacity:0;position:absolute;}</style>
-      <style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple.MuiTouchRipple-rippleVisible{opacity:0.3;-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-animation-name:animation-1taevns;animation-name:animation-1taevns;-webkit-animation-duration:550ms;animation-duration:550ms;-webkit-animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);}</style>
-      <style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple.MuiTouchRipple-ripplePulsate{-webkit-animation-duration:200ms;animation-duration:200ms;}</style>
-      <style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple .MuiTouchRipple-child{opacity:1;display:block;width:100%;height:100%;border-radius:50%;background-color:currentColor;}</style>
-      <style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple .MuiTouchRipple-childLeaving{opacity:0;-webkit-animation-name:animation-5ich1p;animation-name:animation-5ich1p;-webkit-animation-duration:550ms;animation-duration:550ms;-webkit-animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);}</style>
-      <style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple .MuiTouchRipple-childPulsate{position:absolute;left:0px;top:0;-webkit-animation-name:animation-f6tr5a;animation-name:animation-f6tr5a;-webkit-animation-duration:2500ms;animation-duration:2500ms;-webkit-animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-delay:200ms;animation-delay:200ms;}</style>
-      <style data-emotion="css" data-s="">@-webkit-keyframes animation-f6tr5a{0%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}50%{-webkit-transform:scale(0.92);-moz-transform:scale(0.92);-ms-transform:scale(0.92);transform:scale(0.92);}100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}</style>
-      <style data-emotion="css" data-s="">@keyframes animation-f6tr5a{0%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}50%{-webkit-transform:scale(0.92);-moz-transform:scale(0.92);-ms-transform:scale(0.92);transform:scale(0.92);}100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}</style>
-      <style data-emotion="css" data-s="">@-webkit-keyframes animation-5ich1p{0%{opacity:1;}100%{opacity:0;}}</style>
-      <style data-emotion="css" data-s="">@keyframes animation-5ich1p{0%{opacity:1;}100%{opacity:0;}}</style>
-      <style data-emotion="css" data-s="">@-webkit-keyframes animation-1taevns{0%{-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);transform:scale(0);opacity:0.1;}100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:0.3;}}</style>
-      <style data-emotion="css" data-s="">@keyframes animation-1taevns{0%{-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);transform:scale(0);opacity:0.1;}100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:0.3;}}</style>
-      <meta name="viewport" content="width=device-width">
-      <title></title>
-      <meta name="next-head-count" content="3">
-      <link rel="preload" href="http://dev.bitcredit.ge/_next/static/media/a34f9d1faa5f3315-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust">
-      <noscript data-n-css=""></noscript>
-      <script defer="" nomodule="" src="./take-loan_files/polyfills.js.download"></script><script src="./take-loan_files/webpack.js.download" defer=""></script><script src="./take-loan_files/main.js.download" defer=""></script><script src="./take-loan_files/_app.js.download" defer=""></script><script src="./take-loan_files/index.js.download" defer=""></script><script src="./take-loan_files/_buildManifest.js.download" defer=""></script><script src="./take-loan_files/_ssgManifest.js.download" defer=""></script>
-      <style>/*
-         ! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
-         *//*
-         1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-         2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-         */
-         *,
-         ::before,
-         ::after {
-         box-sizing: border-box; /* 1 */
-         border-width: 0; /* 2 */
-         border-style: solid; /* 2 */
-         border-color: #e5e7eb; /* 2 */
-         }
-         ::before,
-         ::after {
-         --tw-content: '';
-         }
-         /*
-         1. Use a consistent sensible line-height in all browsers.
-         2. Prevent adjustments of font size after orientation changes in iOS.
-         3. Use a more readable tab size.
-         4. Use the user's configured `sans` font-family by default.
-         5. Use the user's configured `sans` font-feature-settings by default.
-         6. Use the user's configured `sans` font-variation-settings by default.
-         7. Disable tap highlights on iOS
-         */
-         html,
-         :host {
-         line-height: 1.5; /* 1 */
-         -webkit-text-size-adjust: 100%; /* 2 */
-         -moz-tab-size: 4; /* 3 */
-         -o-tab-size: 4;
-         tab-size: 4; /* 3 */
-         font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
-         font-feature-settings: normal; /* 5 */
-         font-variation-settings: normal; /* 6 */
-         -webkit-tap-highlight-color: transparent; /* 7 */
-         }
-         /*
-         1. Remove the margin in all browsers.
-         2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
-         */
-         body {
-         margin: 0; /* 1 */
-         line-height: inherit; /* 2 */
-         }
-         /*
-         1. Add the correct height in Firefox.
-         2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-         3. Ensure horizontal rules are visible by default.
-         */
-         hr {
-         height: 0; /* 1 */
-         color: inherit; /* 2 */
-         border-top-width: 1px; /* 3 */
-         }
-         /*
-         Add the correct text decoration in Chrome, Edge, and Safari.
-         */
-         abbr:where([title]) {
-         -webkit-text-decoration: underline dotted;
-         text-decoration: underline dotted;
-         }
-         /*
-         Remove the default font size and weight for headings.
-         */
-         h1,
-         h2,
-         h3,
-         h4,
-         h5,
-         h6 {
-         font-size: inherit;
-         font-weight: inherit;
-         }
-         /*
-         Reset links to optimize for opt-in styling instead of opt-out.
-         */
-         a {
-         color: inherit;
-         text-decoration: inherit;
-         }
-         /*
-         Add the correct font weight in Edge and Safari.
-         */
-         b,
-         strong {
-         font-weight: bolder;
-         }
-         /*
-         1. Use the user's configured `mono` font-family by default.
-         2. Use the user's configured `mono` font-feature-settings by default.
-         3. Use the user's configured `mono` font-variation-settings by default.
-         4. Correct the odd `em` font sizing in all browsers.
-         */
-         code,
-         kbd,
-         samp,
-         pre {
-         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
-         font-feature-settings: normal; /* 2 */
-         font-variation-settings: normal; /* 3 */
-         font-size: 1em; /* 4 */
-         }
-         /*
-         Add the correct font size in all browsers.
-         */
-         small {
-         font-size: 80%;
-         }
-         /*
-         Prevent `sub` and `sup` elements from affecting the line height in all browsers.
-         */
-         sub,
-         sup {
-         font-size: 75%;
-         line-height: 0;
-         position: relative;
-         vertical-align: baseline;
-         }
-         sub {
-         bottom: -0.25em;
-         }
-         sup {
-         top: -0.5em;
-         }
-         /*
-         1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-         2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-         3. Remove gaps between table borders by default.
-         */
-         table {
-         text-indent: 0; /* 1 */
-         border-color: inherit; /* 2 */
-         border-collapse: collapse; /* 3 */
-         }
-         /*
-         1. Change the font styles in all browsers.
-         2. Remove the margin in Firefox and Safari.
-         3. Remove default padding in all browsers.
-         */
-         button,
-         input,
-         optgroup,
-         select,
-         textarea {
-         font-family: inherit; /* 1 */
-         font-feature-settings: inherit; /* 1 */
-         font-variation-settings: inherit; /* 1 */
-         font-size: 100%; /* 1 */
-         font-weight: inherit; /* 1 */
-         line-height: inherit; /* 1 */
-         letter-spacing: inherit; /* 1 */
-         color: inherit; /* 1 */
-         margin: 0; /* 2 */
-         padding: 0; /* 3 */
-         }
-         /*
-         Remove the inheritance of text transform in Edge and Firefox.
-         */
-         button,
-         select {
-         text-transform: none;
-         }
-         /*
-         1. Correct the inability to style clickable types in iOS and Safari.
-         2. Remove default button styles.
-         */
-         button,
-         input:where([type='button']),
-         input:where([type='reset']),
-         input:where([type='submit']) {
-         -webkit-appearance: button; /* 1 */
-         background-color: transparent; /* 2 */
-         background-image: none; /* 2 */
-         }
-         /*
-         Use the modern Firefox focus style for all focusable elements.
-         */
-         :-moz-focusring {
-         outline: auto;
-         }
-         /*
-         Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
-         */
-         :-moz-ui-invalid {
-         box-shadow: none;
-         }
-         /*
-         Add the correct vertical alignment in Chrome and Firefox.
-         */
-         progress {
-         vertical-align: baseline;
-         }
-         /*
-         Correct the cursor style of increment and decrement buttons in Safari.
-         */
-         ::-webkit-inner-spin-button,
-         ::-webkit-outer-spin-button {
-         height: auto;
-         }
-         /*
-         1. Correct the odd appearance in Chrome and Safari.
-         2. Correct the outline style in Safari.
-         */
-         [type='search'] {
-         -webkit-appearance: textfield; /* 1 */
-         outline-offset: -2px; /* 2 */
-         }
-         /*
-         Remove the inner padding in Chrome and Safari on macOS.
-         */
-         ::-webkit-search-decoration {
-         -webkit-appearance: none;
-         }
-         /*
-         1. Correct the inability to style clickable types in iOS and Safari.
-         2. Change font properties to `inherit` in Safari.
-         */
-         ::-webkit-file-upload-button {
-         -webkit-appearance: button; /* 1 */
-         font: inherit; /* 2 */
-         }
-         /*
-         Add the correct display in Chrome and Safari.
-         */
-         summary {
-         display: list-item;
-         }
-         /*
-         Removes the default spacing and border for appropriate elements.
-         */
-         blockquote,
-         dl,
-         dd,
-         h1,
-         h2,
-         h3,
-         h4,
-         h5,
-         h6,
-         hr,
-         figure,
-         p,
-         pre {
-         margin: 0;
-         }
-         fieldset {
-         margin: 0;
-         padding: 0;
-         }
-         legend {
-         padding: 0;
-         }
-         ol,
-         ul,
-         menu {
-         list-style: none;
-         margin: 0;
-         padding: 0;
-         }
-         /*
-         Reset default styling for dialogs.
-         */
-         dialog {
-         padding: 0;
-         }
-         /*
-         Prevent resizing textareas horizontally by default.
-         */
-         textarea {
-         resize: vertical;
-         }
-         /*
-         1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
-         2. Set the default placeholder color to the user's configured gray 400 color.
-         */
-         input::-moz-placeholder, textarea::-moz-placeholder {
-         opacity: 1; /* 1 */
-         color: #9ca3af; /* 2 */
-         }
-         input::placeholder,
-         textarea::placeholder {
-         opacity: 1; /* 1 */
-         color: #9ca3af; /* 2 */
-         }
-         /*
-         Set the default cursor for buttons.
-         */
-         button,
-         [role="button"] {
-         cursor: pointer;
-         }
-         /*
-         Make sure disabled buttons don't get the pointer cursor.
-         */
-         :disabled {
-         cursor: default;
-         }
-         /*
-         1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-         2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-         This can trigger a poorly considered lint error in some tools but is included by design.
-         */
-         img,
-         svg,
-         video,
-         canvas,
-         audio,
-         iframe,
-         embed,
-         object {
-         display: block; /* 1 */
-         vertical-align: middle; /* 2 */
-         }
-         /*
-         Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-         */
-         img,
-         video {
-         max-width: 100%;
-         height: auto;
-         }
-         /* Make elements with the HTML hidden attribute stay hidden by default */
-         [hidden] {
-         display: none;
-         }
-         *, ::before, ::after {
-         --tw-border-spacing-x: 0;
-         --tw-border-spacing-y: 0;
-         --tw-translate-x: 0;
-         --tw-translate-y: 0;
-         --tw-rotate: 0;
-         --tw-skew-x: 0;
-         --tw-skew-y: 0;
-         --tw-scale-x: 1;
-         --tw-scale-y: 1;
-         --tw-pan-x:  ;
-         --tw-pan-y:  ;
-         --tw-pinch-zoom:  ;
-         --tw-scroll-snap-strictness: proximity;
-         --tw-gradient-from-position:  ;
-         --tw-gradient-via-position:  ;
-         --tw-gradient-to-position:  ;
-         --tw-ordinal:  ;
-         --tw-slashed-zero:  ;
-         --tw-numeric-figure:  ;
-         --tw-numeric-spacing:  ;
-         --tw-numeric-fraction:  ;
-         --tw-ring-inset:  ;
-         --tw-ring-offset-width: 0px;
-         --tw-ring-offset-color: #fff;
-         --tw-ring-color: rgb(59 130 246 / 0.5);
-         --tw-ring-offset-shadow: 0 0 #0000;
-         --tw-ring-shadow: 0 0 #0000;
-         --tw-shadow: 0 0 #0000;
-         --tw-shadow-colored: 0 0 #0000;
-         --tw-blur:  ;
-         --tw-brightness:  ;
-         --tw-contrast:  ;
-         --tw-grayscale:  ;
-         --tw-hue-rotate:  ;
-         --tw-invert:  ;
-         --tw-saturate:  ;
-         --tw-sepia:  ;
-         --tw-drop-shadow:  ;
-         --tw-backdrop-blur:  ;
-         --tw-backdrop-brightness:  ;
-         --tw-backdrop-contrast:  ;
-         --tw-backdrop-grayscale:  ;
-         --tw-backdrop-hue-rotate:  ;
-         --tw-backdrop-invert:  ;
-         --tw-backdrop-opacity:  ;
-         --tw-backdrop-saturate:  ;
-         --tw-backdrop-sepia:  ;
-         --tw-contain-size:  ;
-         --tw-contain-layout:  ;
-         --tw-contain-paint:  ;
-         --tw-contain-style:  ;
-         }
-         ::backdrop {
-         --tw-border-spacing-x: 0;
-         --tw-border-spacing-y: 0;
-         --tw-translate-x: 0;
-         --tw-translate-y: 0;
-         --tw-rotate: 0;
-         --tw-skew-x: 0;
-         --tw-skew-y: 0;
-         --tw-scale-x: 1;
-         --tw-scale-y: 1;
-         --tw-pan-x:  ;
-         --tw-pan-y:  ;
-         --tw-pinch-zoom:  ;
-         --tw-scroll-snap-strictness: proximity;
-         --tw-gradient-from-position:  ;
-         --tw-gradient-via-position:  ;
-         --tw-gradient-to-position:  ;
-         --tw-ordinal:  ;
-         --tw-slashed-zero:  ;
-         --tw-numeric-figure:  ;
-         --tw-numeric-spacing:  ;
-         --tw-numeric-fraction:  ;
-         --tw-ring-inset:  ;
-         --tw-ring-offset-width: 0px;
-         --tw-ring-offset-color: #fff;
-         --tw-ring-color: rgb(59 130 246 / 0.5);
-         --tw-ring-offset-shadow: 0 0 #0000;
-         --tw-ring-shadow: 0 0 #0000;
-         --tw-shadow: 0 0 #0000;
-         --tw-shadow-colored: 0 0 #0000;
-         --tw-blur:  ;
-         --tw-brightness:  ;
-         --tw-contrast:  ;
-         --tw-grayscale:  ;
-         --tw-hue-rotate:  ;
-         --tw-invert:  ;
-         --tw-saturate:  ;
-         --tw-sepia:  ;
-         --tw-drop-shadow:  ;
-         --tw-backdrop-blur:  ;
-         --tw-backdrop-brightness:  ;
-         --tw-backdrop-contrast:  ;
-         --tw-backdrop-grayscale:  ;
-         --tw-backdrop-hue-rotate:  ;
-         --tw-backdrop-invert:  ;
-         --tw-backdrop-opacity:  ;
-         --tw-backdrop-saturate:  ;
-         --tw-backdrop-sepia:  ;
-         --tw-contain-size:  ;
-         --tw-contain-layout:  ;
-         --tw-contain-paint:  ;
-         --tw-contain-style:  ;
-         }
-         .container {
-         width: 100%;
-         }
-         @media (min-width: 640px) {
-         .container {
-         max-width: 640px;
-         }
-         }
-         @media (min-width: 768px) {
-         .container {
-         max-width: 768px;
-         }
-         }
-         @media (min-width: 1024px) {
-         .container {
-         max-width: 1024px;
-         }
-         }
-         @media (min-width: 1280px) {
-         .container {
-         max-width: 1280px;
-         }
-         }
-         @media (min-width: 1536px) {
-         .container {
-         max-width: 1536px;
-         }
-         }
-         .pointer-events-none {
-         pointer-events: none;
-         }
-         .visible {
-         visibility: visible;
-         }
-         .static {
-         position: static;
-         }
-         .fixed {
-         position: fixed;
-         }
-         .absolute {
-         position: absolute;
-         }
-         .relative {
-         position: relative;
-         }
-         .sticky {
-         position: sticky;
-         }
-         .inset-0 {
-         inset: 0px;
-         }
-         .-bottom-9 {
-         bottom: -2.25rem;
-         }
-         .bottom-0 {
-         bottom: 0px;
-         }
-         .left-1\/2 {
-         left: 50%;
-         }
-         .left-4 {
-         left: 1rem;
-         }
-         .left-6 {
-         left: 1.5rem;
-         }
-         .top-0 {
-         top: 0px;
-         }
-         .top-1\/2 {
-         top: 50%;
-         }
-         .top-\[-16px\] {
-         top: -16px;
-         }
-         .z-0 {
-         z-index: 0;
-         }
-         .z-10 {
-         z-index: 10;
-         }
-         .z-50 {
-         z-index: 50;
-         }
-         .col-span-2 {
-         grid-column: span 2 / span 2;
-         }
-         .m-20 {
-         margin: 5rem;
-         }
-         .m-6 {
-         margin: 1.5rem;
-         }
-         .mx-0 {
-         margin-left: 0px;
-         margin-right: 0px;
-         }
-         .mx-0\.5 {
-         margin-left: 0.125rem;
-         margin-right: 0.125rem;
-         }
-         .mx-5 {
-         margin-left: 1.25rem;
-         margin-right: 1.25rem;
-         }
-         .mx-auto {
-         margin-left: auto;
-         margin-right: auto;
-         }
-         .my-3 {
-         margin-top: 0.75rem;
-         margin-bottom: 0.75rem;
-         }
-         .my-5 {
-         margin-top: 1.25rem;
-         margin-bottom: 1.25rem;
-         }
-         .-mb-5 {
-         margin-bottom: -1.25rem;
-         }
-         .-mr-1 {
-         margin-right: -0.25rem;
-         }
-         .-mr-1\.5 {
-         margin-right: -0.375rem;
-         }
-         .mb-10 {
-         margin-bottom: 2.5rem;
-         }
-         .mb-4 {
-         margin-bottom: 1rem;
-         }
-         .mb-5 {
-         margin-bottom: 1.25rem;
-         }
-         .mb-8 {
-         margin-bottom: 2rem;
-         }
-         .ml-2 {
-         margin-left: 0.5rem;
-         }
-         .ml-4 {
-         margin-left: 1rem;
-         }
-         .ml-8 {
-         margin-left: 2rem;
-         }
-         .ml-9 {
-         margin-left: 2.25rem;
-         }
-         .mr-1 {
-         margin-right: 0.25rem;
-         }
-         .mr-1\.5 {
-         margin-right: 0.375rem;
-         }
-         .mr-16 {
-         margin-right: 4rem;
-         }
-         .mr-2 {
-         margin-right: 0.5rem;
-         }
-         .mr-3 {
-         margin-right: 0.75rem;
-         }
-         .mt-1 {
-         margin-top: 0.25rem;
-         }
-         .mt-1\.5 {
-         margin-top: 0.375rem;
-         }
-         .mt-10 {
-         margin-top: 2.5rem;
-         }
-         .mt-3 {
-         margin-top: 0.75rem;
-         }
-         .mt-3\.5 {
-         margin-top: 0.875rem;
-         }
-         .mt-4 {
-         margin-top: 1rem;
-         }
-         .mt-5 {
-         margin-top: 1.25rem;
-         }
-         .mt-6 {
-         margin-top: 1.5rem;
-         }
-         .mt-8 {
-         margin-top: 2rem;
-         }
-         .box-border {
-         box-sizing: border-box;
-         }
-         .box-content {
-         box-sizing: content-box;
-         }
-         .line-clamp-1 {
-         overflow: hidden;
-         display: -webkit-box;
-         -webkit-box-orient: vertical;
-         -webkit-line-clamp: 1;
-         }
-         .flex {
-         display: flex;
-         }
-         .table {
-         display: table;
-         }
-         .grid {
-         display: grid;
-         }
-         .hidden {
-         display: none;
-         }
-         .h-12 {
-         height: 3rem;
-         }
-         .h-20 {
-         height: 5rem;
-         }
-         .h-4 {
-         height: 1rem;
-         }
-         .h-8 {
-         height: 2rem;
-         }
-         .h-\[50px\] {
-         height: 50px;
-         }
-         .max-h-\[300px\] {
-         max-height: 300px;
-         }
-         .max-h-\[450px\] {
-         max-height: 450px;
-         }
-         .min-h-full {
-         min-height: 100%;
-         }
-         .w-14 {
-         width: 3.5rem;
-         }
-         .w-20 {
-         width: 5rem;
-         }
-         .w-\[2px\] {
-         width: 2px;
-         }
-         .w-\[400px\] {
-         width: 400px;
-         }
-         .w-\[50px\] {
-         width: 50px;
-         }
-         .w-full {
-         width: 100%;
-         }
-         .w-screen {
-         width: 100vw;
-         }
-         .max-w-96 {
-         max-width: 24rem;
-         }
-         .max-w-\[420px\] {
-         max-width: 420px;
-         }
-         .max-w-\[650px\] {
-         max-width: 650px;
-         }
-         .flex-grow {
-         flex-grow: 1;
-         }
-         .grow {
-         flex-grow: 1;
-         }
-         .-translate-x-1\/2 {
-         --tw-translate-x: -50%;
-         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-         }
-         .-translate-y-1\/2 {
-         --tw-translate-y: -50%;
-         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-         }
-         .-translate-y-6 {
-         --tw-translate-y: -1.5rem;
-         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-         }
-         .translate-y-0 {
-         --tw-translate-y: 0px;
-         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-         }
-         .translate-y-4 {
-         --tw-translate-y: 1rem;
-         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-         }
-         .rotate-180 {
-         --tw-rotate: 180deg;
-         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-         }
-         .transform {
-         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-         }
-         @keyframes pulse {
-         50% {
-         opacity: .5;
-         }
-         }
-         .animate-pulse {
-         animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-         }
-         .cursor-default {
-         cursor: default;
-         }
-         .cursor-pointer {
-         cursor: pointer;
-         }
-         .list-disc {
-         list-style-type: disc;
-         }
-         .grid-cols-3 {
-         grid-template-columns: repeat(3, minmax(0, 1fr));
-         }
-         .flex-col {
-         flex-direction: column;
-         }
-         .items-end {
-         align-items: flex-end;
-         }
-         .items-center {
-         align-items: center;
-         }
-         .justify-center {
-         justify-content: center;
-         }
-         .justify-between {
-         justify-content: space-between;
-         }
-         .gap-10 {
-         gap: 2.5rem;
-         }
-         .gap-2 {
-         gap: 0.5rem;
-         }
-         .gap-3 {
-         gap: 0.75rem;
-         }
-         .gap-5 {
-         gap: 1.25rem;
-         }
-         .gap-6 {
-         gap: 1.5rem;
-         }
-         .gap-7 {
-         gap: 1.75rem;
-         }
-         .gap-x-1 {
-         -moz-column-gap: 0.25rem;
-         column-gap: 0.25rem;
-         }
-         .gap-x-1\.5 {
-         -moz-column-gap: 0.375rem;
-         column-gap: 0.375rem;
-         }
-         .gap-x-2 {
-         -moz-column-gap: 0.5rem;
-         column-gap: 0.5rem;
-         }
-         .gap-x-2\.5 {
-         -moz-column-gap: 0.625rem;
-         column-gap: 0.625rem;
-         }
-         .gap-x-3 {
-         -moz-column-gap: 0.75rem;
-         column-gap: 0.75rem;
-         }
-         .gap-x-5 {
-         -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
-         }
-         .gap-x-6 {
-         -moz-column-gap: 1.5rem;
-         column-gap: 1.5rem;
-         }
-         .gap-x-\[9px\] {
-         -moz-column-gap: 9px;
-         column-gap: 9px;
-         }
-         .gap-y-10 {
-         row-gap: 2.5rem;
-         }
-         .gap-y-3 {
-         row-gap: 0.75rem;
-         }
-         .place-self-start {
-         place-self: start;
-         }
-         .place-self-center {
-         place-self: center;
-         }
-         .overflow-hidden {
-         overflow: hidden;
-         }
-         .overflow-x-auto {
-         overflow-x: auto;
-         }
-         .overflow-y-auto {
-         overflow-y: auto;
-         }
-         .rounded-2xl {
-         border-radius: 1rem;
-         }
-         .rounded-full {
-         border-radius: 9999px;
-         }
-         .rounded-lg {
-         border-radius: 0.5rem;
-         }
-         .rounded-xl {
-         border-radius: 0.75rem;
-         }
-         .rounded-b-2xl {
-         border-bottom-right-radius: 1rem;
-         border-bottom-left-radius: 1rem;
-         }
-         .rounded-b-xl {
-         border-bottom-right-radius: 0.75rem;
-         border-bottom-left-radius: 0.75rem;
-         }
-         .rounded-t-xl {
-         border-top-left-radius: 0.75rem;
-         border-top-right-radius: 0.75rem;
-         }
-         .border {
-         border-width: 1px;
-         }
-         .border-0 {
-         border-width: 0px;
-         }
-         .border-x {
-         border-left-width: 1px;
-         border-right-width: 1px;
-         }
-         .border-b {
-         border-bottom-width: 1px;
-         }
-         .border-r {
-         border-right-width: 1px;
-         }
-         .border-t {
-         border-top-width: 1px;
-         }
-         .border-solid {
-         border-style: solid;
-         }
-         .border-none {
-         border-style: none;
-         }
-         .border-\[\#303030\] {
-         --tw-border-opacity: 1;
-         border-color: rgb(48 48 48 / var(--tw-border-opacity));
-         }
-         .border-borders {
-         --tw-border-opacity: 1;
-         border-color: rgb(233 239 254 / var(--tw-border-opacity));
-         }
-         .border-borders-input {
-         --tw-border-opacity: 1;
-         border-color: rgb(224 231 255 / var(--tw-border-opacity));
-         }
-         .border-borders-primary {
-         --tw-border-opacity: 1;
-         border-color: rgb(242 242 242 / var(--tw-border-opacity));
-         }
-         .border-indigoPurple {
-         --tw-border-opacity: 1;
-         border-color: rgb(70 10 114 / var(--tw-border-opacity));
-         }
-         .\!bg-pureWhite {
-         --tw-bg-opacity: 1 !important;
-         background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
-         }
-         .bg-\[\#460A72\] {
-         --tw-bg-opacity: 1;
-         background-color: rgb(70 10 114 / var(--tw-bg-opacity));
-         }
-         .bg-borders-primary {
-         --tw-bg-opacity: 1;
-         background-color: rgb(242 242 242 / var(--tw-bg-opacity));
-         }
-         .bg-gray-50 {
-         --tw-bg-opacity: 1;
-         background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-         }
-         .bg-indigoPurple {
-         --tw-bg-opacity: 1;
-         background-color: rgb(70 10 114 / var(--tw-bg-opacity));
-         }
-         .bg-pureBlack {
-         --tw-bg-opacity: 1;
-         background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-         }
-         .bg-pureBlack-modal {
-         --tw-bg-opacity: 1;
-         background-color: rgb(1 1 15 / var(--tw-bg-opacity));
-         }
-         .bg-pureWhite {
-         --tw-bg-opacity: 1;
-         background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-         }
-         .bg-pureWhite-input {
-         --tw-bg-opacity: 1;
-         background-color: rgb(246 248 255 / var(--tw-bg-opacity));
-         }
-         .bg-slate-200 {
-         --tw-bg-opacity: 1;
-         background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-         }
-         .bg-white {
-         --tw-bg-opacity: 1;
-         background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-         }
-         .bg-opacity-80 {
-         --tw-bg-opacity: 0.8;
-         }
-         .bg-gradient-to-b {
-         background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-         }
-         .bg-gradient-to-t {
-         background-image: linear-gradient(to top, var(--tw-gradient-stops));
-         }
-         .from-transparent {
-         --tw-gradient-from: transparent var(--tw-gradient-from-position);
-         --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
-         --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-         }
-         .to-pureWhite {
-         --tw-gradient-to: #FFFFFF var(--tw-gradient-to-position);
-         }
-         .p-2 {
-         padding: 0.5rem;
-         }
-         .p-4 {
-         padding: 1rem;
-         }
-         .p-5 {
-         padding: 1.25rem;
-         }
-         .p-6 {
-         padding: 1.5rem;
-         }
-         .px-0 {
-         padding-left: 0px;
-         padding-right: 0px;
-         }
-         .px-28 {
-         padding-left: 7rem;
-         padding-right: 7rem;
-         }
-         .px-3 {
-         padding-left: 0.75rem;
-         padding-right: 0.75rem;
-         }
-         .px-3\.5 {
-         padding-left: 0.875rem;
-         padding-right: 0.875rem;
-         }
-         .px-4 {
-         padding-left: 1rem;
-         padding-right: 1rem;
-         }
-         .px-5 {
-         padding-left: 1.25rem;
-         padding-right: 1.25rem;
-         }
-         .px-6 {
-         padding-left: 1.5rem;
-         padding-right: 1.5rem;
-         }
-         .py-0 {
-         padding-top: 0px;
-         padding-bottom: 0px;
-         }
-         .py-1 {
-         padding-top: 0.25rem;
-         padding-bottom: 0.25rem;
-         }
-         .py-10 {
-         padding-top: 2.5rem;
-         padding-bottom: 2.5rem;
-         }
-         .py-3 {
-         padding-top: 0.75rem;
-         padding-bottom: 0.75rem;
-         }
-         .py-4 {
-         padding-top: 1rem;
-         padding-bottom: 1rem;
-         }
-         .py-5 {
-         padding-top: 1.25rem;
-         padding-bottom: 1.25rem;
-         }
-         .py-6 {
-         padding-top: 1.5rem;
-         padding-bottom: 1.5rem;
-         }
-         .py-7 {
-         padding-top: 1.75rem;
-         padding-bottom: 1.75rem;
-         }
-         .\!pb-0 {
-         padding-bottom: 0px !important;
-         }
-         .pb-0 {
-         padding-bottom: 0px;
-         }
-         .pb-5 {
-         padding-bottom: 1.25rem;
-         }
-         .pl-3 {
-         padding-left: 0.75rem;
-         }
-         .pl-3\.5 {
-         padding-left: 0.875rem;
-         }
-         .pl-5 {
-         padding-left: 1.25rem;
-         }
-         .pr-8 {
-         padding-right: 2rem;
-         }
-         .pt-4 {
-         padding-top: 1rem;
-         }
-         .text-left {
-         text-align: left;
-         }
-         .text-center {
-         text-align: center;
-         }
-         .indent-6 {
-         text-indent: 1.5rem;
-         }
-         .text-\[16px\] {
-         font-size: 16px;
-         }
-         .text-\[28px\] {
-         font-size: 28px;
-         }
-         .text-\[32px\] {
-         font-size: 32px;
-         }
-         .text-base {
-         font-size: 1rem;
-         line-height: 1.5rem;
-         }
-         .text-lg {
-         font-size: 1.125rem;
-         line-height: 1.75rem;
-         }
-         .text-sm {
-         font-size: 0.875rem;
-         line-height: 1.25rem;
-         }
-         .text-xs {
-         font-size: 0.75rem;
-         line-height: 1rem;
-         }
-         .font-\[700\] {
-         font-weight: 700;
-         }
-         .font-bold {
-         font-weight: 700;
-         }
-         .font-normal {
-         font-weight: 400;
-         }
-         .font-semibold {
-         font-weight: 600;
-         }
-         .uppercase {
-         text-transform: uppercase;
-         }
-         .capitalize {
-         text-transform: capitalize;
-         }
-         .leading-6 {
-         line-height: 1.5rem;
-         }
-         .leading-8 {
-         line-height: 2rem;
-         }
-         .\!text-green-500 {
-         --tw-text-opacity: 1 !important;
-         color: rgb(34 197 94 / var(--tw-text-opacity)) !important;
-         }
-         .\!text-texts {
-         --tw-text-opacity: 1 !important;
-         color: rgb(142 142 164 / var(--tw-text-opacity)) !important;
-         }
-         .text-black {
-         --tw-text-opacity: 1;
-         color: rgb(0 0 0 / var(--tw-text-opacity));
-         }
-         .text-customGreen {
-         --tw-text-opacity: 1;
-         color: rgb(2 197 45 / var(--tw-text-opacity));
-         }
-         .text-customRed {
-         --tw-text-opacity: 1;
-         color: rgb(255 76 80 / var(--tw-text-opacity));
-         }
-         .text-electricIndigoPurple {
-         --tw-text-opacity: 1;
-         color: rgb(80 0 166 / var(--tw-text-opacity));
-         }
-         .text-gray-500 {
-         --tw-text-opacity: 1;
-         color: rgb(107 114 128 / var(--tw-text-opacity));
-         }
-         .text-gray-700 {
-         --tw-text-opacity: 1;
-         color: rgb(55 65 81 / var(--tw-text-opacity));
-         }
-         .text-gray-900 {
-         --tw-text-opacity: 1;
-         color: rgb(17 24 39 / var(--tw-text-opacity));
-         }
-         .text-indigoPurple {
-         --tw-text-opacity: 1;
-         color: rgb(70 10 114 / var(--tw-text-opacity));
-         }
-         .text-myCoinsBlue {
-         --tw-text-opacity: 1;
-         color: rgb(30 144 192 / var(--tw-text-opacity));
-         }
-         .text-orange-300 {
-         --tw-text-opacity: 1;
-         color: rgb(253 186 116 / var(--tw-text-opacity));
-         }
-         .text-pureBlack {
-         --tw-text-opacity: 1;
-         color: rgb(0 0 0 / var(--tw-text-opacity));
-         }
-         .text-pureWhite {
-         --tw-text-opacity: 1;
-         color: rgb(255 255 255 / var(--tw-text-opacity));
-         }
-         .text-red-500 {
-         --tw-text-opacity: 1;
-         color: rgb(239 68 68 / var(--tw-text-opacity));
-         }
-         .text-texts {
-         --tw-text-opacity: 1;
-         color: rgb(142 142 164 / var(--tw-text-opacity));
-         }
-         .text-texts-primary {
-         --tw-text-opacity: 1;
-         color: rgb(2 1 24 / var(--tw-text-opacity));
-         }
-         .text-white {
-         --tw-text-opacity: 1;
-         color: rgb(255 255 255 / var(--tw-text-opacity));
-         }
-         .underline {
-         text-decoration-line: underline;
-         }
-         .line-through {
-         text-decoration-line: line-through;
-         }
-         .caret-melonOrange {
-         caret-color: #E8A690;
-         }
-         .opacity-0 {
-         opacity: 0;
-         }
-         .opacity-100 {
-         opacity: 1;
-         }
-         .shadow-lg {
-         --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-         --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-         }
-         .shadow-xl {
-         --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-         --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-         }
-         .outline-none {
-         outline: 2px solid transparent;
-         outline-offset: 2px;
-         }
-         .outline {
-         outline-style: solid;
-         }
-         .ring-0 {
-         --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-         --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-         box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-         }
-         .ring-1 {
-         --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-         --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-         box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-         }
-         .blur {
-         --tw-blur: blur(8px);
-         filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-         }
-         .filter {
-         filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-         }
-         .transition {
-         transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-         transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-         transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-         transition-duration: 150ms;
-         }
-         .transition-all {
-         transition-property: all;
-         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-         transition-duration: 150ms;
-         }
-         .transition-opacity {
-         transition-property: opacity;
-         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-         transition-duration: 150ms;
-         }
-         .duration-200 {
-         transition-duration: 200ms;
-         }
-         .duration-300 {
-         transition-duration: 300ms;
-         }
-         .ease-in {
-         transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-         }
-         .ease-in-out {
-         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-         }
-         .ease-out {
-         transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-         }
-         :root {
-         --foreground-rgb: 0, 0, 0;
-         --background-start-rgb: 214, 219, 220;
-         --background-end-rgb: 255, 255, 255;
-         }
-         @media (prefers-color-scheme: dark) {
-         :root {
-         --foreground-rgb: 255, 255, 255;
-         --background-start-rgb: 0, 0, 0;
-         --background-end-rgb: 0, 0, 0;
-         }
-         }
-         * {
-         box-sizing: border-box;
-         padding: 0;
-         margin: 0;
-         }
-         .no-scroll-bar {
-         -ms-overflow-style: none;  /* Internet Explorer 10+ */
-         scrollbar-width: none;  /* Firefox */
-         }
-         .no-scroll-bar::-webkit-scrollbar {
-         display: none;  /* Safari and Chrome */
-         }
-         /*.ripple-effect {*/
-         /*  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;*/
-         /*  box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;*/
-         /*  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;*/
-         /*}*/
-         .ripple {
-         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-         border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-         color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-         }
-         .Mui-expanded {
-         border-bottom-left-radius: 0;
-         border-bottom-right-radius: 0;
-         margin: 0;
-         min-height: 0 !important;
-         }
-         input[type=number]::-webkit-inner-spin-button,
-         input[type=number]::-webkit-outer-spin-button {
-         -webkit-appearance: none;
-         margin: 0;
-         }
-         .placeholder\:text-left::-moz-placeholder {
-         text-align: left;
-         }
-         .placeholder\:text-left::placeholder {
-         text-align: left;
-         }
-         .placeholder\:text-\[32px\]::-moz-placeholder {
-         font-size: 32px;
-         }
-         .placeholder\:text-\[32px\]::placeholder {
-         font-size: 32px;
-         }
-         .last\:border-0:last-child {
-         border-width: 0px;
-         }
-         .last\:border-r-0:last-child {
-         border-right-width: 0px;
-         }
-         .hover\:bg-\[\#F6F8FF\]:hover {
-         --tw-bg-opacity: 1;
-         background-color: rgb(246 248 255 / var(--tw-bg-opacity));
-         }
-         .hover\:text-\[\#460A72\]:hover {
-         --tw-text-opacity: 1;
-         color: rgb(70 10 114 / var(--tw-text-opacity));
-         }
-         .focus\:border-none:focus {
-         border-style: none;
-         }
-         .focus\:outline:focus {
-         outline-style: solid;
-         }
-         .focus\:outline-0:focus {
-         outline-width: 0px;
-         }
-         .focus\:outline-electricIndigoPurple:focus {
-         outline-color: #5000A6;
-         }
-         .focus\:ring-0:focus {
-         --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-         --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-         box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-         }
-         .disabled\:bg-pureWhite-disabled:disabled {
-         --tw-bg-opacity: 1;
-         background-color: rgb(232 232 237 / var(--tw-bg-opacity));
-         }
-         .disabled\:text-texts-disabled:disabled {
-         --tw-text-opacity: 1;
-         color: rgb(198 198 210 / var(--tw-text-opacity));
-         }
-         .group:hover .group-hover\:-ml-2 {
-         margin-left: -0.5rem;
-         }
-         .has-\[\:disabled\]\:opacity-30:has(:disabled) {
-         opacity: 0.3;
-         }
-         @media (min-width: 640px) {
-         .sm\:my-8 {
-         margin-top: 2rem;
-         margin-bottom: 2rem;
-         }
-         .sm\:w-full {
-         width: 100%;
-         }
-         .sm\:max-w-\[600px\] {
-         max-width: 600px;
-         }
-         .sm\:max-w-\[950px\] {
-         max-width: 950px;
-         }
-         .sm\:translate-y-0 {
-         --tw-translate-y: 0px;
-         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-         }
-         .sm\:scale-100 {
-         --tw-scale-x: 1;
-         --tw-scale-y: 1;
-         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-         }
-         .sm\:scale-95 {
-         --tw-scale-x: .95;
-         --tw-scale-y: .95;
-         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-         }
-         .sm\:items-center {
-         align-items: center;
-         }
-         .sm\:rounded-lg {
-         border-radius: 0.5rem;
-         }
-         .sm\:p-0 {
-         padding: 0px;
-         }
-         }
-         @media (min-width: 1536px) {
-         .\32xl\:mt-10 {
-         margin-top: 2.5rem;
-         }
-         }
-         .rtl\:text-right:where([dir="rtl"], [dir="rtl"] *) {
-         text-align: right;
-         }
-         @media (prefers-color-scheme: dark) {
-         .dark\:text-\[\#808080\] {
-         --tw-text-opacity: 1;
-         color: rgb(128 128 128 / var(--tw-text-opacity));
-         }
-         }
-         /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvc3R5bGVzL2dsb2JhbHMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztDQUFjLENBQWQ7OztDQUFjOztBQUFkOzs7RUFBQSxzQkFBYyxFQUFkLE1BQWM7RUFBZCxlQUFjLEVBQWQsTUFBYztFQUFkLG1CQUFjLEVBQWQsTUFBYztFQUFkLHFCQUFjLEVBQWQsTUFBYztBQUFBOztBQUFkOztFQUFBLGdCQUFjO0FBQUE7O0FBQWQ7Ozs7Ozs7O0NBQWM7O0FBQWQ7O0VBQUEsZ0JBQWMsRUFBZCxNQUFjO0VBQWQsOEJBQWMsRUFBZCxNQUFjO0VBQWQsZ0JBQWMsRUFBZCxNQUFjO0VBQWQsY0FBYztLQUFkLFdBQWMsRUFBZCxNQUFjO0VBQWQsK0hBQWMsRUFBZCxNQUFjO0VBQWQsNkJBQWMsRUFBZCxNQUFjO0VBQWQsK0JBQWMsRUFBZCxNQUFjO0VBQWQsd0NBQWMsRUFBZCxNQUFjO0FBQUE7O0FBQWQ7OztDQUFjOztBQUFkO0VBQUEsU0FBYyxFQUFkLE1BQWM7RUFBZCxvQkFBYyxFQUFkLE1BQWM7QUFBQTs7QUFBZDs7OztDQUFjOztBQUFkO0VBQUEsU0FBYyxFQUFkLE1BQWM7RUFBZCxjQUFjLEVBQWQsTUFBYztFQUFkLHFCQUFjLEVBQWQsTUFBYztBQUFBOztBQUFkOztDQUFjOztBQUFkO0VBQUEseUNBQWM7VUFBZCxpQ0FBYztBQUFBOztBQUFkOztDQUFjOztBQUFkOzs7Ozs7RUFBQSxrQkFBYztFQUFkLG9CQUFjO0FBQUE7O0FBQWQ7O0NBQWM7O0FBQWQ7RUFBQSxjQUFjO0VBQWQsd0JBQWM7QUFBQTs7QUFBZDs7Q0FBYzs7QUFBZDs7RUFBQSxtQkFBYztBQUFBOztBQUFkOzs7OztDQUFjOztBQUFkOzs7O0VBQUEsK0dBQWMsRUFBZCxNQUFjO0VBQWQsNkJBQWMsRUFBZCxNQUFjO0VBQWQsK0JBQWMsRUFBZCxNQUFjO0VBQWQsY0FBYyxFQUFkLE1BQWM7QUFBQTs7QUFBZDs7Q0FBYzs7QUFBZDtFQUFBLGNBQWM7QUFB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O0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQSxnQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxxQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxvQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxpQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxtQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxtQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQSxnQkFBbUI7RUFBbkIsb0JBQW1CO0VBQW5CLDRCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBLHNCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLHNCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLHlCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLHFCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLHNCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLG1CQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5COztFQUFBO0lBQUE7RUFBbUI7QUFBQTtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUEsd0JBQW1CO09BQW5CO0FBQW1CO0FBQW5CO0VBQUEseUJBQW1CO09BQW5CO0FBQW1CO0FBQW5CO0VBQUEsdUJBQW1CO09BQW5CO0FBQW1CO0FBQW5CO0VBQUEseUJBQW1CO09BQW5CO0FBQW1CO0FBQW5CO0VBQUEsd0JBQW1CO09BQW5CO0FBQW1CO0FBQW5CO0VBQUEsd0JBQW1CO09BQW5CO0FBQW1CO0FBQW5CO0VBQUEsdUJBQW1CO09BQW5CO0FBQW1CO0FBQW5CO0VBQUEsb0JBQW1CO09BQW5CO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBLGdDQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLG1DQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLCtCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQSxzQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUEsc0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsc0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsc0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsc0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsc0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsNkJBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUEsZ0VBQW1CO0VBQW5CLCtEQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQSxpQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxrQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxxQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxzQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxrQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxxQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxvQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxnQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxvQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxtQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxvQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxpQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxvQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxtQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxvQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUEsZUFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxtQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxtQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSxrQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUEsK0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsK0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsb0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsb0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsb0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsb0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsb0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsb0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsb0JBQW1CO0VBQW5C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MkRDOztFQTNERDtJQUFBLGVBMkRDO0lBM0RELGVBMkRDO0lBM0REO0VBMkRDOztFQTNERDtJQUFBLGlCQTJEQztJQTNERCxpQkEyREM7SUEzREQ7RUEyREM7O0VBM0REO0lBQUE7RUEyREM7O0VBM0REO0lBQUE7RUEyREM7O0VBM0REO0lBQUE7RUEyREM7QUFBQTs7QUEzREQ7O0VBQUE7SUFBQTtFQTJEQztBQUFBOztBQTNERDtFQUFBO0FBMkRDOztBQTNERDs7RUFBQTtJQUFBLG9CQTJEQztJQTNERDtFQTJEQztBQUFBIiwic291cmNlc0NvbnRlbnQiOlsiQHRhaWx3aW5kIGJhc2U7XHJcbkB0YWlsd2luZCBjb21wb25lbnRzO1xyXG5AdGFpbHdpbmQgdXRpbGl0aWVzO1xyXG5cclxuOnJvb3Qge1xyXG4gIC0tZm9yZWdyb3VuZC1yZ2I6IDAsIDAsIDA7XHJcbiAgLS1iYWNrZ3JvdW5kLXN0YXJ0LXJnYjogMjE0LCAyMTksIDIyMDtcclxuICAtLWJhY2tncm91bmQtZW5kLXJnYjogMjU1LCAyNTUsIDI1NTtcclxufVxyXG5cclxuQG1lZGlhIChwcmVmZXJzLWNvbG9yLXNjaGVtZTogZGFyaykge1xyXG4gIDpyb290IHtcclxuICAgIC0tZm9yZWdyb3VuZC1yZ2I6IDI1NSwgMjU1LCAyNTU7XHJcbiAgICAtLWJhY2tncm91bmQtc3RhcnQtcmdiOiAwLCAwLCAwO1xyXG4gICAgLS1iYWNrZ3JvdW5kLWVuZC1yZ2I6IDAsIDAsIDA7XHJcbiAgfVxyXG59XHJcblxyXG4qIHtcclxuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG4gIHBhZGRpbmc6IDA7XHJcbiAgbWFyZ2luOiAwO1xyXG59XHJcblxyXG4ubm8tc2Nyb2xsLWJhciB7XHJcbiAgLW1zLW92ZXJmbG93LXN0eWxlOiBub25lOyAgLyogSW50ZXJuZXQgRXhwbG9yZXIgMTArICovXHJcbiAgc2Nyb2xsYmFyLXdpZHRoOiBub25lOyAgLyogRmlyZWZveCAqL1xyXG59XHJcbi5uby1zY3JvbGwtYmFyOjotd2Via2l0LXNjcm9sbGJhciB7XHJcbiAgZGlzcGxheTogbm9uZTsgIC8qIFNhZmFyaSBhbmQgQ2hyb21lICovXHJcbn1cclxuLyoucmlwcGxlLWVmZmVjdCB7Ki9cclxuLyogIGJhY2tncm91bmQtY29sb3I6IDI1MG1zIGN1YmljLWJlemllcigwLjQsIDAsIDAuMiwgMSkgMG1zOyovXHJcbi8qICBib3gtc2hhZG93OiAyNTBtcyBjdWJpYy1iZXppZXIoMC40LCAwLCAwLjIsIDEpIDBtczsqL1xyXG4vKiAgYm9yZGVyLWNvbG9yOiAyNTBtcyBjdWJpYy1iZXppZXIoMC40LCAwLCAwLjIsIDEpIDBtcyBjb2xvciAyNTBtcyBjdWJpYy1iZXppZXIoMC40LCAwLCAwLjIsIDEpIDBtczsqL1xyXG4vKn0qL1xyXG5cclxuLnJpcHBsZSB7XHJcbiAgdHJhbnNpdGlvbjogYmFja2dyb3VuZC1jb2xvciAyNTBtcyBjdWJpYy1iZXppZXIoMC40LCAwLCAwLjIsIDEpIDBtcyxcclxuICBib3gtc2hhZG93IDI1MG1zIGN1YmljLWJlemllcigwLjQsIDAsIDAuMiwgMSkgMG1zLFxyXG4gIGJvcmRlci1jb2xvciAyNTBtcyBjdWJpYy1iZXppZXIoMC40LCAwLCAwLjIsIDEpIDBtcyxcclxuICBjb2xvciAyNTBtcyBjdWJpYy1iZXppZXIoMC40LCAwLCAwLjIsIDEpIDBtcztcclxufVxyXG5cclxuLk11aS1leHBhbmRlZCB7XHJcbiAgYm9yZGVyLWJvdHRvbS1sZWZ0LXJhZGl1czogMDtcclxuICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogMDtcclxuICBtYXJnaW46IDA7XHJcbiAgbWluLWhlaWdodDogMCAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4uTXVpLWV4cGFuZGVkIHtcclxuXHJcbn1cclxuXHJcbmlucHV0W3R5cGU9bnVtYmVyXTo6LXdlYmtpdC1pbm5lci1zcGluLWJ1dHRvbixcclxuaW5wdXRbdHlwZT1udW1iZXJdOjotd2Via2l0LW91dGVyLXNwaW4tYnV0dG9uIHtcclxuICAtd2Via2l0LWFwcGVhcmFuY2U6IG5vbmU7XHJcbiAgbWFyZ2luOiAwO1xyXG59Il0sInNvdXJjZVJvb3QiOiIifQ== */
-      </style>
-      <style>/* cyrillic-ext */
-         @font-face {
-         font-family: '__Inter_36bd41';
-         font-style: normal;
-         font-weight: 100 900;
-         font-display: swap;
-         src: url(/_next/static/media/55c55f0601d81cf3-s.woff2) format('woff2');
-         unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-         }
-         /* cyrillic */
-         @font-face {
-         font-family: '__Inter_36bd41';
-         font-style: normal;
-         font-weight: 100 900;
-         font-display: swap;
-         src: url(/_next/static/media/26a46d62cd723877-s.woff2) format('woff2');
-         unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-         }
-         /* greek-ext */
-         @font-face {
-         font-family: '__Inter_36bd41';
-         font-style: normal;
-         font-weight: 100 900;
-         font-display: swap;
-         src: url(/_next/static/media/97e0cb1ae144a2a9-s.woff2) format('woff2');
-         unicode-range: U+1F00-1FFF;
-         }
-         /* greek */
-         @font-face {
-         font-family: '__Inter_36bd41';
-         font-style: normal;
-         font-weight: 100 900;
-         font-display: swap;
-         src: url(/_next/static/media/581909926a08bbc8-s.woff2) format('woff2');
-         unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-         }
-         /* vietnamese */
-         @font-face {
-         font-family: '__Inter_36bd41';
-         font-style: normal;
-         font-weight: 100 900;
-         font-display: swap;
-         src: url(/_next/static/media/df0a9ae256c0569c-s.woff2) format('woff2');
-         unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-         }
-         /* latin-ext */
-         @font-face {
-         font-family: '__Inter_36bd41';
-         font-style: normal;
-         font-weight: 100 900;
-         font-display: swap;
-         src: url(/_next/static/media/6d93bde91c0c2823-s.woff2) format('woff2');
-         unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-         }
-         /* latin */
-         @font-face {
-         font-family: '__Inter_36bd41';
-         font-style: normal;
-         font-weight: 100 900;
-         font-display: swap;
-         src: url(/_next/static/media/a34f9d1faa5f3315-s.p.woff2) format('woff2');
-         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-         }@font-face {font-family: '__Inter_Fallback_36bd41';src: local("Arial");ascent-override: 90.49%;descent-override: 22.56%;line-gap-override: 0.00%;size-adjust: 107.06%
-         }.__className_36bd41 {font-family: '__Inter_36bd41', '__Inter_Fallback_36bd41';font-style: normal
-         }
-         /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS8lM0NpbnB1dCUyMGNzcyUyMEVzOVRhZyUzRSIsIjxubyBzb3VyY2U+Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGlCQUFpQjtBQUNqQjtFQUNFLDZCQUFvQjtFQUNwQixrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLGtCQUFrQjtFQUNsQixzRUFBc0U7RUFDdEUsc0ZBQXNGO0FBQ3hGO0FBQ0EsYUFBYTtBQUNiO0VBQ0UsNkJBQW9CO0VBQ3BCLGtCQUFrQjtFQUNsQixvQkFBb0I7RUFDcEIsa0JBQWtCO0VBQ2xCLHNFQUFzRTtFQUN0RSxvRUFBb0U7QUFDdEU7QUFDQSxjQUFjO0FBQ2Q7RUFDRSw2QkFBb0I7RUFDcEIsa0JBQWtCO0VBQ2xCLG9CQUFvQjtFQUNwQixrQkFBa0I7RUFDbEIsc0VBQXNFO0VBQ3RFLDBCQUEwQjtBQUM1QjtBQUNBLFVBQVU7QUFDVjtFQUNFLDZCQUFvQjtFQUNwQixrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLGtCQUFrQjtFQUNsQixzRUFBc0U7RUFDdEUsc0ZBQXNGO0FBQ3hGO0FBQ0EsZUFBZTtBQUNmO0VBQ0UsNkJBQW9CO0VBQ3BCLGtCQUFrQjtFQUNsQixvQkFBb0I7RUFDcEIsa0JBQWtCO0VBQ2xCLHNFQUFzRTtFQUN0RSx1S0FBdUs7QUFDeks7QUFDQSxjQUFjO0FBQ2Q7RUFDRSw2QkFBb0I7RUFDcEIsa0JBQWtCO0VBQ2xCLG9CQUFvQjtFQUNwQixrQkFBa0I7RUFDbEIsc0VBQXNFO0VBQ3RFLGdKQUFnSjtBQUNsSjtBQUNBLFVBQVU7QUFDVjtFQUNFLDZCQUFvQjtFQUNwQixrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLGtCQUFrQjtFQUNsQix3RUFBd0U7RUFDeEUsaU1BQWlNO0FBQ25NLENDOURBLFlBQUEsdUNBQUEsb0JBQUEsd0JBQUEseUJBQUEseUJBQUEsb0JBQUE7Q0FBQSxxQkFBQSx5REFBQSxrQkFBQTtDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiLyogY3lyaWxsaWMtZXh0ICovXG5AZm9udC1mYWNlIHtcbiAgZm9udC1mYW1pbHk6ICdJbnRlcic7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbiAgZm9udC13ZWlnaHQ6IDEwMCA5MDA7XG4gIGZvbnQtZGlzcGxheTogc3dhcDtcbiAgc3JjOiB1cmwoL19uZXh0L3N0YXRpYy9tZWRpYS81NWM1NWYwNjAxZDgxY2YzLXMud29mZjIpIGZvcm1hdCgnd29mZjInKTtcbiAgdW5pY29kZS1yYW5nZTogVSswNDYwLTA1MkYsIFUrMUM4MC0xQzg4LCBVKzIwQjQsIFUrMkRFMC0yREZGLCBVK0E2NDAtQTY5RiwgVStGRTJFLUZFMkY7XG59XG4vKiBjeXJpbGxpYyAqL1xuQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnSW50ZXInO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG4gIGZvbnQtd2VpZ2h0OiAxMDAgOTAwO1xuICBmb250LWRpc3BsYXk6IHN3YXA7XG4gIHNyYzogdXJsKC9fbmV4dC9zdGF0aWMvbWVkaWEvMjZhNDZkNjJjZDcyMzg3Ny1zLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7XG4gIHVuaWNvZGUtcmFuZ2U6IFUrMDMwMSwgVSswNDAwLTA0NUYsIFUrMDQ5MC0wNDkxLCBVKzA0QjAtMDRCMSwgVSsyMTE2O1xufVxuLyogZ3JlZWstZXh0ICovXG5AZm9udC1mYWNlIHtcbiAgZm9udC1mYW1pbHk6ICdJbnRlcic7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbiAgZm9udC13ZWlnaHQ6IDEwMCA5MDA7XG4gIGZvbnQtZGlzcGxheTogc3dhcDtcbiAgc3JjOiB1cmwoL19uZXh0L3N0YXRpYy9tZWRpYS85N2UwY2IxYWUxNDRhMmE5LXMud29mZjIpIGZvcm1hdCgnd29mZjInKTtcbiAgdW5pY29kZS1yYW5nZTogVSsxRjAwLTFGRkY7XG59XG4vKiBncmVlayAqL1xuQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnSW50ZXInO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG4gIGZvbnQtd2VpZ2h0OiAxMDAgOTAwO1xuICBmb250LWRpc3BsYXk6IHN3YXA7XG4gIHNyYzogdXJsKC9fbmV4dC9zdGF0aWMvbWVkaWEvNTgxOTA5OTI2YTA4YmJjOC1zLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7XG4gIHVuaWNvZGUtcmFuZ2U6IFUrMDM3MC0wMzc3LCBVKzAzN0EtMDM3RiwgVSswMzg0LTAzOEEsIFUrMDM4QywgVSswMzhFLTAzQTEsIFUrMDNBMy0wM0ZGO1xufVxuLyogdmlldG5hbWVzZSAqL1xuQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnSW50ZXInO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG4gIGZvbnQtd2VpZ2h0OiAxMDAgOTAwO1xuICBmb250LWRpc3BsYXk6IHN3YXA7XG4gIHNyYzogdXJsKC9fbmV4dC9zdGF0aWMvbWVkaWEvZGYwYTlhZTI1NmMwNTY5Yy1zLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7XG4gIHVuaWNvZGUtcmFuZ2U6IFUrMDEwMi0wMTAzLCBVKzAxMTAtMDExMSwgVSswMTI4LTAxMjksIFUrMDE2OC0wMTY5LCBVKzAxQTAtMDFBMSwgVSswMUFGLTAxQjAsIFUrMDMwMC0wMzAxLCBVKzAzMDMtMDMwNCwgVSswMzA4LTAzMDksIFUrMDMyMywgVSswMzI5LCBVKzFFQTAtMUVGOSwgVSsyMEFCO1xufVxuLyogbGF0aW4tZXh0ICovXG5AZm9udC1mYWNlIHtcbiAgZm9udC1mYW1pbHk6ICdJbnRlcic7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbiAgZm9udC13ZWlnaHQ6IDEwMCA5MDA7XG4gIGZvbnQtZGlzcGxheTogc3dhcDtcbiAgc3JjOiB1cmwoL19uZXh0L3N0YXRpYy9tZWRpYS82ZDkzYmRlOTFjMGMyODIzLXMud29mZjIpIGZvcm1hdCgnd29mZjInKTtcbiAgdW5pY29kZS1yYW5nZTogVSswMTAwLTAyQUYsIFUrMDMwNCwgVSswMzA4LCBVKzAzMjksIFUrMUUwMC0xRTlGLCBVKzFFRjItMUVGRiwgVSsyMDIwLCBVKzIwQTAtMjBBQiwgVSsyMEFELTIwQzAsIFUrMjExMywgVSsyQzYwLTJDN0YsIFUrQTcyMC1BN0ZGO1xufVxuLyogbGF0aW4gKi9cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0ludGVyJztcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xuICBmb250LXdlaWdodDogMTAwIDkwMDtcbiAgZm9udC1kaXNwbGF5OiBzd2FwO1xuICBzcmM6IHVybCgvX25leHQvc3RhdGljL21lZGlhL2EzNGY5ZDFmYWE1ZjMzMTUtcy5wLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7XG4gIHVuaWNvZGUtcmFuZ2U6IFUrMDAwMC0wMEZGLCBVKzAxMzEsIFUrMDE1Mi0wMTUzLCBVKzAyQkItMDJCQywgVSswMkM2LCBVKzAyREEsIFUrMDJEQywgVSswMzA0LCBVKzAzMDgsIFUrMDMyOSwgVSsyMDAwLTIwNkYsIFUrMjA3NCwgVSsyMEFDLCBVKzIxMjIsIFUrMjE5MSwgVSsyMTkzLCBVKzIyMTIsIFUrMjIxNSwgVStGRUZGLCBVK0ZGRkQ7XG59XG4iLG51bGxdLCJzb3VyY2VSb290IjoiIn0= */
-      </style>
-      <style>.custom-menu .MuiPaper-root {
-         border: 1px solid #E9EFFE;
-         border-radius: 12px;
-         box-shadow: none;
-         margin-left: -50px;
-         ul{
-         padding-top: 0 ;
-         padding-bottom: 0;
-         li {
-         height: 50px;
-         }
-         }
-         }
-         /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvc3R5bGVzL0FwcC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx5QkFBeUI7SUFDekIsbUJBQW1CO0lBQ25CLGdCQUFnQjtJQUNoQixrQkFBa0I7SUFDbEI7UUFDSSxlQUFlO1FBQ2YsaUJBQWlCO1FBQ2pCO1lBQ0ksWUFBWTtRQUNoQjtJQUNKO0FBQ0oiLCJzb3VyY2VzQ29udGVudCI6WyIuY3VzdG9tLW1lbnUgLk11aVBhcGVyLXJvb3Qge1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgI0U5RUZGRTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEycHg7XHJcbiAgICBib3gtc2hhZG93OiBub25lO1xyXG4gICAgbWFyZ2luLWxlZnQ6IC01MHB4O1xyXG4gICAgdWx7XHJcbiAgICAgICAgcGFkZGluZy10b3A6IDAgO1xyXG4gICAgICAgIHBhZGRpbmctYm90dG9tOiAwO1xyXG4gICAgICAgIGxpIHtcclxuICAgICAgICAgICAgaGVpZ2h0OiA1MHB4O1xyXG4gICAgICAgIH1cclxuICAgIH1cclxufSJdLCJzb3VyY2VSb290IjoiIn0= */
-      </style>
+    <title>Bitcredit - Cryptocurrency Backed Loans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1f1f1f;
-            color: #ffffff;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background-color: #333;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 40px;
-        }
-
-        .hero button {
-            padding: 15px 30px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .about, .benefits, .testimonials, .footer {
-            padding: 60px 20px;
-            background-color: #2b2b2b;
-            text-align: center;
-        }
-
-        .about h2, .benefits h2, .testimonials h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
-
-        .about .steps {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-
-        .about .step {
-            max-width: 300px;
-        }
-
-        .calculator {
-            padding: 60px 20px;
-            background-color: #ffffff;
-            text-align: center;
-            color: #000000;
-        }
-
-        .calculator h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .benefits .cards {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-
-        .benefits .card {
-            max-width: 300px;
-            background-color: #444;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .testimonials .testimonials-list {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-
-        .testimonials .testimonial {
-            max-width: 300px;
-            background-color: #444;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .footer {
-            background-color: #1f1f1f;
-            color: #777;
-        }
-
-        .footer .social-icons {
-            margin-top: 20px;
-        }
-
-        .footer .social-icons img {
-            width: 32px;
-            margin: 0 10px;
+        @media screen and (max-width: 1279px) {
+            #description {
+                max-width: 512px;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Get Loans with Your Crypto</h1>
-            <p>Use your cryptocurrency as collateral to get fast and secure loans.</p>
-            <button>Calculate Your Loan</button>
-        </section>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <div class="container mx-auto max-w-screen-2xl">
+        <header class="bg-blue-800 text-white">
+            <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+                <div class="text-2xl font-bold">Bitcredit</div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#" class="hover:text-blue-200">Home</a>
+                    <a href="#" class="hover:text-blue-200">About</a>
+                    <a href="#" class="hover:text-blue-200">Calculator</a>
+                    <a href="#" class="hover:text-blue-200">Contact</a>
+                </div>
+            </nav>
+        </header>
 
-        <!-- About Section -->
-        <section class="about">
-            <h2>How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <h3>Step 1: Register</h3>
-                    <p>Create an account and verify your identity.</p>
+        <main>
+            <!-- Hero Section -->
+            <section class="bg-blue-800 text-white py-20">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-5xl font-bold mb-4">Unlock Your Crypto's Potential</h1>
+                    <p class="text-xl mb-8">Get fast and secure loans using your cryptocurrency as collateral.</p>
+                    <a href="#calculator" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">Calculate Your Loan</a>
                 </div>
-                <div class="step">
-                    <h3>Step 2: Deposit Crypto</h3>
-                    <p>Choose your collateral and deposit it into your account.</p>
-                </div>
-                <div class="step">
-                    <h3>Step 3: Get Loan</h3>
-                    <p>Receive your loan directly to your bank account.</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Loan Calculator Section -->
-        <section class="calculator ">
-            <h2>Calculate Your Loan</h2>
-            <div class="flex justify-center gap-x-6">
-               <div class="text-black bg-white">
-                  <div class="shadow-lg max-w-[650px] flex-grow border border-borders rounded-2xl">
-                     <div class="m-6 flex flex-xol">
-                        <div class="border border-borders rounded-xl p-5 w-full flex flex-col undefined">
-                           <div class="flex flex-col gap-6">
-                              <h1 class="pb-5 font-semibold text-base border-b border-borders-primary undefined">სესხის კალკულატორი</h1>
-                              <div class="flex flex-col gap-7">
-                                 <div class="flex">
-                                    <div class="">
-                                       <div class="relative font-[700] mr-16">
-                                          <input class="w-full caret-melonOrange outline-none font-[700] placeholder:text-left bg-white placeholder:text-[32px] text-[32px]  border-none focus:border-none focus:ring-0" type="number" placeholder="0₾" name="amount" value="">
-                                          <div class="absolute top-0 left-4 text-[32px] helvetica" style="left: 165px;">₾</div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="flex justify-between border-b border-borders-primary pb-5">
-                                    <div class="flex flex-col justify-center">
-                                       <h4 class="font-normal text-base">სესხის რაოდენობა</h4>
-                                    </div>
-                                    <div class="flex gap-2">
-                                       <div class="text-pureWhite bg-indigoPurple border-indigoPurple font-normal text-sm p-4 rounded-lg cursor-pointer border">₾ ლარი</div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="flex flex-col gap-7">
-                                 <div class="">
-                                    <div class="relative font-[700] mr-16">
-                                       <input class="w-full caret-melonOrange outline-none font-[700] placeholder:text-left bg-white placeholder:text-[32px] text-[32px]  border-none focus:border-none focus:ring-0" type="number" placeholder="0BTC" name="collateral" value="16.17196084">
-                                       <div class="absolute top-0 left-4 text-[32px] helvetica" style="left: 225px;">BTC</div>
-                                    </div>
-                                 </div>
-                                 <div class="flex justify-between">
-                                    <div class="flex flex-col">
-                                       <h4 class="font-normal text-base">გირაო</h4>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+            <!-- About Section -->
+            <section class="py-20">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">How Bitcredit Works</h2>
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div class="bg-white rounded-lg shadow-md p-6 max-w-md">
+                            <h3 class="text-xl font-semibold mb-4">1. Apply</h3>
+                            <p>Create an account and complete our simple application process.</p>
                         </div>
-                     </div>
-                     <div class="m-6 flex flex-xol">
-                        <div class="border border-borders rounded-xl p-5 w-full flex flex-col undefined">
-                           <div class="flex flex-col">
-                              <h1 class="pb-5 font-semibold text-base border-b border-borders-primary undefined">სესხის ხანგრძლივობა</h1>
-                              <div class="flex py-4 gap-x-3">
-                                 <div class="text-pureWhite bg-indigoPurple border-indigoPurple text-center font-normal text-sm py-4 px-5 rounded-lg cursor-pointer border grow">2 კვირა</div>
-                                 <div class="text-indigoPurple bg-pureWhite-input border-borders-input text-center font-normal text-sm py-4 px-5 rounded-lg cursor-pointer border grow">1 თვე</div>
-                                 <div class="text-indigoPurple bg-pureWhite-input border-borders-input text-center font-normal text-sm py-4 px-5 rounded-lg cursor-pointer border grow">2 თვე</div>
-                                 <div class="text-indigoPurple bg-pureWhite-input border-borders-input text-center font-normal text-sm py-4 px-5 rounded-lg cursor-pointer border grow">3 თვე</div>
-                                 <div class="text-indigoPurple bg-pureWhite-input border-borders-input text-center font-normal text-sm py-4 px-5 rounded-lg cursor-pointer border grow">6 თვე</div>
-                              </div>
-                           </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 max-w-md">
+                            <h3 class="text-xl font-semibold mb-4">2. Deposit Crypto</h3>
+                            <p>Transfer your cryptocurrency to our secure wallet as collateral.</p>
                         </div>
-                     </div>
-                     <div class="m-6 flex flex-xol">
-                        <div class="border border-borders rounded-xl p-5 w-full flex flex-col pb-0">
-                           <div class="flex flex-col">
-                              <div class="rounded-xl text-sm">
-                                 <div class="grid grid-cols-3 last:border-0 border-b border-borders ">
-                                    <div class="border-r border-borders py-7 font-normal text-sm flex items-center gap-x-1.5">მოთხოვნილი თანხა</div>
-                                    <div class="px-3.5 col-span-2 flex flex-col justify-center">
-                                       <p class="text-base">1233213₾</p>
-                                    </div>
-                                 </div>
-                                 <div class="grid grid-cols-3 last:border-0 border-b border-borders ">
-                                    <div class="border-r border-borders py-7 font-normal text-sm flex items-center gap-x-1.5">გირაო</div>
-                                    <div class="px-3.5 col-span-2 flex flex-col justify-center">
-                                       <p class="text-base">16.17196084BTC</p>
-                                    </div>
-                                 </div>
-                                 <div class="grid grid-cols-3 last:border-0 border-b border-borders ">
-                                    <div class="border-r border-borders py-7 font-normal text-sm flex items-center gap-x-1.5">სესხის ხანგრძლივობა</div>
-                                    <div class="px-3.5 col-span-2 flex flex-col justify-center">
-                                       <p class="text-base">14 დღე</p>
-                                    </div>
-                                 </div>
-                                 <div class="grid grid-cols-3 last:border-0 border-b border-borders ">
-                                    <div class="border-r border-borders py-7 font-normal text-sm flex items-center gap-x-1.5">სესხის უზრუნველყოფის კოეფიციენტი (LTV)</div>
-                                    <div class="px-3.5 col-span-2 flex flex-col justify-center">
-                                       <p class="text-base">50%</p>
-                                    </div>
-                                 </div>
-                                 <div class="grid grid-cols-3 last:border-0 border-b border-borders ">
-                                    <div class="border-r border-borders py-7 font-normal text-sm flex items-center gap-x-1.5">საპროცენტო განაკვეთი</div>
-                                    <div class="px-3.5 col-span-2 flex flex-col justify-center">
-                                       <p class="text-base">15.5%</p>
-                                    </div>
-                                 </div>
-                                 <div class="grid grid-cols-3 last:border-0 border-b border-borders ">
-                                    <div class="border-r border-borders py-7 font-normal text-sm flex items-center gap-x-1.5">ყოველდღიური ინტერესი</div>
-                                    <div class="px-3.5 col-span-2 flex flex-col justify-center">
-                                       <p class="text-base">0.0425%</p>
-                                    </div>
-                                 </div>
-                                 <div class="grid grid-cols-3 last:border-0 border-b border-borders ">
-                                    <div class="border-r border-borders py-7 font-normal text-sm flex items-center gap-x-1.5">მზრდადი ყოველდღიური ინტერესი</div>
-                                    <div class="px-3.5 col-span-2 flex flex-col justify-center">
-                                       <p class="text-base">523.6931917808218₾</p>
-                                    </div>
-                                 </div>
-                                 <div class="grid grid-cols-3 last:border-0 border-b border-borders ">
-                                    <div class="border-r border-borders py-7 font-normal text-sm flex items-center gap-x-1.5">დასაბრუნებელი თანხა</div>
-                                    <div class="px-3.5 col-span-2 flex flex-col justify-center">
-                                       <p class="text-base">1240544.7₾</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 max-w-md">
+                            <h3 class="text-xl font-semibold mb-4">3. Receive Funds</h3>
+                            <p>Get your loan quickly deposited into your bank account.</p>
                         </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="text-black bg-white">
-                  <div class="shadow-lg max-w-[650px] flex-grow border border-borders rounded-2xl">
-                     <div class="m-6 flex flex-col">
-                        <div class="p-5 pb-0 border border-borders rounded-xl ">
-                           <div class="flex items-center gap-x-2 mb-5">
-                              <h1 class="text-pureBlack font-semibold text-base place-self-start">სესხის საპროცენტო განაკვეთი</h1>
-                           </div>
-                           <div class="relative max-h-[450px] text-sm py-6 border-t border-borders flex flex-col gap-y-3">
-                              <p>- სესხის საპროცენტო განაკვეთის ტიპი: <span class="font-semibold">ცვლადი</span></p>
-                              <p>- სესხის წლიური საპროცენტო განაკვეთი: <span class="font-semibold">ცვლადი</span></p>
-                              <p>- სესხის ეფექტური საპროცენტო განაკვეთი: <span class="font-semibold">(ცვლადი განისაზღვრება ინდივიდუალურად სესხის ხანგრძლივობის მიხედვით)</span></p>
-                              <p>- სესხის ნომინალური საპროცენტო განაკვეთი: <span class="font-semibold">(ცვლადი განისაზღვრება ინდივიდუალურად სესხის ხანგრძლივობის მიხედვით)</span></p>
-                              <p>- სესხის უზრუნველყოფის კოეფიციენტი (LTV): <span class="font-semibold">50%</span></p>
-                              <p>- სესხის ვალდებულებების უზრუნველყოფა: <span class="font-semibold">X</span></p>
-                           </div>
-                           <div class="flex items-center gap-x-2 mb-5">
-                              <h1 class="text-pureBlack font-semibold text-base place-self-start">სხვა  ინფორმაცია</h1>
-                           </div>
-                           <div class="relative max-h-[450px] text-sm py-6 border-t border-borders flex flex-col gap-y-3">
-                              <p>- სესხის ვადა: <span class="font-semibold">სესხის გაცემიდან X თვე/წელი (ცვლადი განისაზღვრება ინდივიდუალურად), თუმცა, არანაკლებ/არაუმეტეს გრაფიკით განსაზღვრული ბოლო გადახდის თარიღისა</span></p>
-                              <p>- ვირტუალური აქტივის ლიკვიდაციის საკომისიო: <span class="font-semibold">X</span></p>
-                              <p>- სესხის ვადაგადაცილებით დაფარვის საკომისიო: <span class="font-semibold">X</span></p>
-                              <p>- სესხის წინსწრებით დაფარვის საკომისიო:  <span class="font-semibold">X</span></p>
-                           </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loan Calculator Section -->
+            <section id="calculator" class="py-20 bg-white ">
+                <div class="container max-w-7xl mx-auto px-6">
+                    <div class="container mx-auto px-6">
+                        <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Calculate Your Loan</h2>
+                        <div class="flex flex-wrap justify-center gap-8">
+                            <div class="w-full max-w-lg">
+                                <div class="bg-white shadow-lg rounded-lg border border-blue-100 p-6">
+                                    <h3 class="text-xl font-semibold mb-4 pb-4 border-b border-blue-100">სესხის კალკულატორი</h3>
+                                    <div class="space-y-6">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">სესხის რაოდენობა</label>
+                                            <div class="relative">
+                                                <input type="number" placeholder="0" name="amount" class="w-full p-2 border border-blue-100 rounded-md pl-8 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                                                <span class="absolute left-3 top-2 text-gray-500">₾</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">გირაო</label>
+                                            <div class="relative">
+                                                <input type="number" placeholder="0" name="collateral" class="w-full p-2 border border-blue-100 rounded-md pl-8 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                                                <span class="absolute left-3 top-2 text-gray-500">BTC</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">სესხის ხანგრძლივობა</label>
+                                            <div class="flex gap-2">
+                                                <button class="flex-1 py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300">2 კვირა</button>
+                                                <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition duration-300">1 თვე</button>
+                                                <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition duration-300">2 თვე</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full max-w-lg">
+                                <div class="bg-white shadow-lg rounded-lg border border-blue-100 p-6">
+                                    <h3 class="text-xl font-semibold mb-4 pb-4 border-b border-blue-100">სესხის დეტალები</h3>
+                                    <div class="space-y-4">
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">მოთხოვნილი თანხა</span>
+                                            <span class="font-semibold">0₾</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">გირაო</span>
+                                            <span class="font-semibold">0 BTC</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">სესხის ხანგრძლივობა</span>
+                                            <span class="font-semibold">14 დღე</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">საპროცენტო განაკვეთი</span>
+                                            <span class="font-semibold">15.5%</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">დასაბრუნებელი თანხა</span>
+                                            <span class="font-semibold">0₾</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                     <button class="w-full bg-pureBlack text-pureWhite text-base font-semibold rounded-b-2xl py-5 disabled:bg-pureWhite-disabled disabled:text-texts-disabled undefined">ავტორიზაცია</button>
-                  </div>
-               </div>
-            </div>
-        </section>
+    
+                        <!-- Collapsible Loan Calculator -->
+                            <div id="description" class="mt-12 w-full max-w-[1056px] mx-auto">
+                                <button id="toggleCalculator" class="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-t-lg hover:bg-blue-700 transition duration-300 flex justify-between items-center">
+                                    <span>Detailed Loan Calculator</span>
+                                    <svg id="toggleIcon" class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div id="detailedCalculator" class="bg-white shadow-lg rounded-b-lg border border-blue-100 p-6 hidden">
+                                    <div class="space-y-6">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">სესხის საპროცენტო განაკვეთი</label>
+                                            <p class="text-sm text-gray-600">- სესხის საპროცენტო განაკვეთის ტიპი: <span class="font-semibold">ცვლადი</span></p>
+                                            <p class="text-sm text-gray-600">- სესხის წლიური საპროცენტო განაკვეთი: <span class="font-semibold">ცვლადი</span></p>
+                                            <p class="text-sm text-gray-600">- სესხის ეფექტური საპროცენტო განაკვეთი: <span class="font-semibold">(ცვლადი განისაზღვრება ინდივიდუალურად სესხის ხანგრძლივობის მიხედვით)</span></p>
+                                            <p class="text-sm text-gray-600">- სესხის ნომინალური საპროცენტო განაკვეთი: <span class="font-semibold">(ცვლადი განისაზღვრება ინდივიდუალურად სესხის ხანგრძლივობის მიხედვით)</span></p>
+                                            <p class="text-sm text-gray-600">- სესხის უზრუნველყოფის კოეფიციენტი (LTV): <span class="font-semibold">50%</span></p>
+                                            <p class="text-sm text-gray-600">- სესხის ვალდებულებების უზრუნველყოფა: <span class="font-semibold">X</span></p>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">სხვა ინფორმაცია</label>
+                                            <p class="text-sm text-gray-600">- სესხის ვადა: <span class="font-semibold">სესხის გაცემიდან X თვე/წელი (ცვლადი განისაზღვრება ინდივიდუალურად), თუმცა, არანაკლებ/არაუმეტეს გრაფიკით განსაზღვრული ბოლო გადახდის თარიღისა</span></p>
+                                            <p class="text-sm text-gray-600">- ვირტუალური აქტივის ლიკვიდაციის საკომისიო: <span class="font-semibold">X</span></p>
+                                            <p class="text-sm text-gray-600">- სესხის ვადაგადაცილებით დაფარვის საკომისიო: <span class="font-semibold">X</span></p>
+                                            <p class="text-sm text-gray-600">- სესხის წინსწრებით დაფარვის საკომისიო: <span class="font-semibold">X</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+            </section>
 
-        <!-- Benefits Section -->
-        <section class="benefits">
-            <h2>Why Choose Us</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Fast Approval</h3>
-                    <p>Get approved quickly and receive funds within minutes.</p>
+            <!-- Benefits Section -->
+            <section class="py-20 bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Why Choose Bitcredit</h2>
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div class="bg-white rounded-lg shadow-md p-6 max-w-md">
+                            <h3 class="text-xl font-semibold mb-4 text-blue-600">Competitive Rates</h3>
+                            <p>Enjoy low interest rates and flexible repayment terms.</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 max-w-md">
+                            <h3 class="text-xl font-semibold mb-4 text-blue-600">Quick Approval</h3>
+                            <p>Get approved in minutes and receive funds within hours.</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 max-w-md">
+                            <h3 class="text-xl font-semibold mb-4 text-blue-600">Secure Storage</h3>
+                            <p>Your crypto collateral is protected with industry-leading security.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Low Interest Rates</h3>
-                    <p>We offer competitive interest rates that suit your needs.</p>
-                </div>
-                <div class="card">
-                    <h3>Secure Transactions</h3>
-                    <p>Your assets are protected with industry-leading security measures.</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonials-list">
-                <div class="testimonial">
-                    <p>"This service is amazing! I got my loan within minutes."</p>
+            <!-- Testimonials Section -->
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">What Our Clients Say</h2>
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div class="bg-gray-50 rounded-lg p-6 max-w-md">
+                            <p class="mb-4">"Bitcredit made it easy to access cash without selling my crypto. Highly recommended!"</p>
+                            <p class="font-semibold">- Alex K.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6 max-w-md">
+                            <p class="mb-4">"The process was smooth, and the customer service was excellent. I'll definitely use Bitcredit again."</p>
+                            <p class="font-semibold">- Sarah M.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6 max-w-md">
+                            <p class="mb-4">"As a long-term crypto holder, Bitcredit helped me leverage my assets without losing ownership."</p>
+                            <p class="font-semibold">- John D.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial">
-                    <p>"The interest rates are unbeatable, and the process was so easy!"</p>
-                </div>
-                <div class="testimonial">
-                    <p>"I felt secure throughout the entire process. Highly recommend!"</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer Section -->
-        <section class="footer">
-            <p>© 2024 Crypto Loan Company. All rights reserved.</p>
-            <div class="social-icons">
-                <img src="facebook-icon.png" alt="Facebook">
-                <img src="twitter-icon.png" alt="Twitter">
-                <img src="linkedin-icon.png" alt="LinkedIn">
-            </div>
-        </section>
+            </section>
+        </main>
     </div>
+
+    <footer class="bg-blue-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">© 2024 Bitcredit. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-blue-200">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-blue-200">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-blue-200">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggleCalculator');
+        const detailedCalculator = document.getElementById('detailedCalculator');
+        const toggleIcon = document.getElementById('toggleIcon');
+
+        toggleButton.addEventListener('click', () => {
+            detailedCalculator.classList.toggle('hidden');
+            toggleIcon.classList.toggle('rotate-180');
+        });
+    </script>
 </body>
 </html>
