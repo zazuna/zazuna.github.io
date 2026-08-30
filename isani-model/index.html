@@ -675,7 +675,7 @@ else{addEventListener('resize',fit);fit();
    if(ax>40&&ax>ay){closeTips();show(cur+(dx<0?1:-1));return;}                                  /* swipe: always navigates, card goes with the slide */
    if(Math.max(ax,ay)<10&&Date.now()-pt0<450){if(e.target.closest('.lab,.qhit,#chit,.tip,.qtip'))return;   /* taps on interactive things are theirs */
     if(openTip){closeTips();return;}                                                             /* a tap with a card open only closes the card */
-    show(cur+1);}});                                                                             /* otherwise: tap anywhere = next slide */
+    show(cur+(e.clientX<innerWidth/2?-1:1));}});                                                /* otherwise: tap left half = back, right half = forward */
   document.addEventListener('pointercancel',()=>{down=false;});}
  else document.addEventListener('click',()=>{if(!MQM.matches)show(cur+1);});
  show(fromHashD());MQM.addEventListener('change',e=>{if(!e.matches){show(fromHashD());fit();}});}
