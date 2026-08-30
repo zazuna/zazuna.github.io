@@ -236,7 +236,7 @@ html,body{height:100%;background:var(--desk);overflow:hidden;position:relative}
  <div class="figures a d4" id="cvFig"></div>
  <div class="panel"><div class="m">The brief</div><div class="rule g"></div><p class="gold">"Cash flow is king."</p><div class="rule"></div>
   <p>Every figure in this deck is extracted programmatically from the workbook itself — nothing re-typed, nothing asserted.</p>
-  <div class="rule"></div><p class="m">Giorgi Zazadze<br>Omnia Georgia LLC</p><div class="rule"></div><p class="m">Excel · VBA · Python</p></div>
+  <div class="rule"></div><p class="m">Giorgi Zazadze · Group CFO, Fulcrum Holding<br>Built for Omnia Georgia LLC</p><div class="rule"></div><p class="m">Excel · VBA · Python</p></div>
 <!--__/COVER__-->
 </section>
 
@@ -385,7 +385,7 @@ html,body{height:100%;background:var(--desk);overflow:hidden;position:relative}
 <!--__CLOSE__-->
  <div class="ch"><span>Financial model case study</span><span>Giorgi Zazadze · 2026</span></div>
  <div class="big a d1">Cash flow<br>is <em>king.</em></div>
- <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">CFO · financial modeling, project finance, real-estate development</div><div class="m">giorgizazadze@gmail.com · Tbilisi</div></div>
+ <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, project finance, real-estate development</div><div class="m">giorgizazadze@gmail.com · Tbilisi</div></div>
 <!--__/CLOSE__-->
 </section>
 
@@ -830,7 +830,7 @@ svg{width:100%;height:auto;display:block}
  <div class="q a d2">The CFO who builds.</div>
  <p class="a d3" id="brP"></p>
  <p class="a d4">Twenty-nine screens: the place and the lots, the prices and what they cost, when the cash actually arrives, how it was financed, what could go wrong — and the result. Then how it was built.</p>
- <div class="meta a d5"><b>Giorgi Zazadze</b> · CFO<br>Omnia Georgia LLC · O M N Real Estate LLC, Dubai<br>Excel · VBA · Python</div>
+ <div class="meta a d5"><b>Giorgi Zazadze</b> · Group CFO, Fulcrum Holding<br>Built for Omnia Georgia LLC · O M N Real Estate LLC, Dubai<br>Excel · VBA · Python</div>
  <div class="hint a d6">Swipe, or tap the right edge, to continue →</div>
 </div></section>
 
@@ -1039,7 +1039,7 @@ svg{width:100%;height:auto;display:block}
 <section class="sl dark close" data-d="18" data-sec="Close"><div class="in">
  <div class="k a d1">Financial model case study</div>
  <div class="big a d2">Cash flow<br>is <em>king.</em></div>
- <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">CFO · financial modeling, project finance, real-estate development</div><div class="m"><a href="mailto:giorgizazadze@gmail.com">giorgizazadze@gmail.com</a> · Tbilisi</div></div>
+ <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, project finance, real-estate development</div><div class="m"><a href="mailto:giorgizazadze@gmail.com">giorgizazadze@gmail.com</a> · Tbilisi</div></div>
 </div></section>
 
 <div id="bb"><span id="sec">Cover</span><div class="nav"><button id="bPrev" aria-label="Previous">‹</button><button id="bNext" aria-label="Next">›</button></div></div>
@@ -1055,7 +1055,7 @@ const W=350;
 /* cover + brief */
 $('#cvLede').textContent=`Six lots, ${n0(M.buildable)} m², ${M.horizon_months} monthly periods — tranche-priced sales, a dual-lender debt structure and full VAT mechanics, priced on primary market data.`;
 $('#cvFig').innerHTML=`<div class="f"><div class="v ink">${fmtM(M.gdv)}</div><div class="l">Development value</div></div><div class="f"><div class="v">${fmtM(M.net_cf)}</div><div class="l">Net cash flow</div></div><div class="f"><div class="v ink">${M.lot_count} lots</div><div class="l">${M.buildings} buildings + kindergarten</div></div><div class="f"><div class="v ink">${M.horizon_months} mo</div><div class="l">Model horizon</div></div>`;
-$('#brP').innerHTML=`A 24-sheet Excel model of a six-lot, ${M.buildings}-building development in Isani, Tbilisi: tranche-priced sales, a dual-lender debt structure, full VAT mechanics and a ${M.horizon_months}-month cash flow — <b>built and run by the CFO</b>, and read here from the workbook by a script.`;
+$('#brP').innerHTML=`A 24-sheet Excel model of a six-lot, ${M.buildings}-building development in Isani, Tbilisi: tranche-priced sales, a dual-lender debt structure, full VAT mechanics and a ${M.horizon_months}-month cash flow — <b>built and operated by Giorgi Zazadze, Group CFO of Fulcrum Holding, for the developer</b> — and read here from the workbook by a script.`;
 /* place: LOTPOS = % of the render box, as on the desktop (image 4:3, no crop) */
 const LOTPOS={4:[26,33],5:[52.5,25],6:[57,50],1:[77,47.5],3:[37,66],2:[58,74]};
 $('#render').innerHTML=Object.entries(LOTPOS).map(([k,[x,y]])=>{const c=M.lotcards[k];return `<button class="lab ${c.phase==2?'p2':''}" data-k="${k}" style="left:${x}%;top:${y}%" aria-label="Lot ${k}">${k}</button>`;}).join('');
