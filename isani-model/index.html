@@ -1206,7 +1206,7 @@ function activate(s){if(s.classList.contains('on'))return;s.classList.add('on');
 function show(i){i=Math.max(0,Math.min(N-1,i));if(i===cur)return;const d=i>cur?1:-1;stage.style.setProperty('--dx',d*30+'px');
  if(cur>=0){const o=S[cur];o.style.setProperty('--dx',-d*30+'px');o.classList.remove('cur','on');setTimeout(()=>o.style.removeProperty('--dx'),450);}
  cur=i;const s=S[i];s.classList.add('cur');requestAnimationFrame(()=>requestAnimationFrame(()=>activate(s)));
- const dk=s.classList.contains('dark');document.body.classList.toggle('dk',dk);stage.classList.toggle('dk',dk);
+ const dk=s.classList.contains('dark');document.body.classList.toggle('dk',dk);stage.classList.toggle('dk',dk);const tc=document.head.querySelector('meta[name=theme-color]');if(tc)tc.content=dk?'#292625':'#F2EEE4';
  $('#cnt').textContent=String(i+1).padStart(2,'0')+' / '+N;$('#sec').innerHTML=s.dataset.sec;[...prog.children].forEach((e,j)=>e.classList.toggle('done',j<=i));
  $('#bPrev').disabled=i===0;$('#bNext').disabled=i===N-1;if(typeof MQ==='undefined'||MQ.matches)try{history.replaceState(null,'','#m'+(i+1));}catch(e){}}
 $('#bPrev').addEventListener('click',()=>show(cur-1));$('#bNext').addEventListener('click',()=>show(cur+1));
