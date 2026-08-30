@@ -8,9 +8,10 @@
 <style>
 :root{--bg:#F2EEE4;--ink:#24211e;--muted:#6b6154;--muted2:#4a443b;--hair:#CFC7B6;--gold:#C89A3D;--char:#292625;--cream:#E8E1D2;--dktext:#C9C1B0;--grey:#8f8577}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{min-height:100%;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.5}
+html,body{min-height:100%;min-width:340px;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.5}
 main{max-width:720px;margin:0 auto;padding:clamp(40px,9vh,96px) 24px 64px}
-.k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--hair);padding-bottom:14px;display:flex;justify-content:space-between;gap:16px}
+.k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--hair);padding-bottom:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px}
+.k span{white-space:nowrap}
 .hero{display:flex;align-items:center;gap:clamp(16px,3vw,28px);margin-top:clamp(40px,8vh,80px)}
 .hero img{width:clamp(72px,18vw,150px);height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 10px 30px rgba(41,38,37,.18)}
 h1{font-family:"Source Serif 4",serif;font-weight:600;font-size:clamp(27px,6.6vw,56px);line-height:1.05;letter-spacing:-.01em}
