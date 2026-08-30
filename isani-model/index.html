@@ -651,7 +651,7 @@ $('#finDetail').innerHTML=`<div><h3>Facilities as modeled</h3>
 const S=[...document.querySelectorAll('.slide')];
 S.forEach((el,i)=>{const k=el.dataset.k;if(k!==undefined&&k!==''&&!el.classList.contains('cv')&&!el.classList.contains('close')){const c=document.createElement('div');c.className='ch';c.innerHTML=`<span>${k}</span><span>${String(i+1).padStart(2,'0')} · ${S.length}</span>`;el.prepend(c);}
  if(M.theme.frame){const f=document.createElement('div');f.className='frame';f.innerHTML=M.theme.frame;el.prepend(f);}
- if(!el.classList.contains('cv')){const nv=document.createElement('div');nv.className='nav';nv.textContent=TOUCH?'swipe to navigate':'← → to navigate';el.appendChild(nv);}});
+ if(!el.classList.contains('cv')){const nv=document.createElement('div');nv.className='nav';nv.textContent=TOUCH?'swipe to navigate':'← → or click · left back, right forward';el.appendChild(nv);}});
 function count(el,ms){const v=Math.abs(+el.dataset.v),pre=el.dataset.pre,suf=el.dataset.suf;if(RM||!ms){el.textContent=pre+v.toFixed(1)+suf;return;}
  const t0=performance.now();(function fr(t){const k=Math.min(1,(t-t0)/ms),e=1-Math.pow(1-k,3);el.textContent=pre+(v*e).toFixed(1)+suf;if(k<1)requestAnimationFrame(fr);})(t0);}
 function fit(){const s=Math.min(innerWidth/1920,innerHeight/1080);$('#stage').style.transform='translate(-50%,-50%) scale('+s+')';}
@@ -677,7 +677,7 @@ else{addEventListener('resize',fit);fit();
     if(openTip){closeTips();return;}                                                             /* a tap with a card open only closes the card */
     show(cur+(e.clientX<innerWidth/2?-1:1));}});                                                /* otherwise: tap left half = back, right half = forward */
   document.addEventListener('pointercancel',()=>{down=false;});}
- else document.addEventListener('click',()=>{if(!MQM.matches)show(cur+1);});
+ else document.addEventListener('click',e=>{if(MQM.matches)return;show(cur+(e.clientX<innerWidth/2?-1:1));});   /* mouse: left half = back, right half = forward */
  show(fromHashD());MQM.addEventListener('change',e=>{if(!e.matches){show(fromHashD());fit();}});}
 </script>
 <div id="story"></div>
