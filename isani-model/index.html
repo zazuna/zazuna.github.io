@@ -217,6 +217,7 @@ html,body{height:100%;background:var(--desk);overflow:hidden;position:relative;t
 .homeL{display:flex;align-items:center;gap:20px}
 .homeL span{color:var(--navc)}
 @media print{.homeL{display:none}}
+.close .who .m a{color:var(--gold);text-decoration:none}
 
 
 @media print{
@@ -392,7 +393,7 @@ html,body{height:100%;background:var(--desk);overflow:hidden;position:relative;t
 <!--__CLOSE__-->
  <div class="ch"><span>Financial model case study</span><span>Giorgi Zazadze · 2024</span></div>
  <div class="big a d1">Cash flow<br>is <em>king.</em></div>
- <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, project finance, real-estate development</div><div class="m">giorgizazadze@gmail.com · Tbilisi</div></div>
+ <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, project finance, real-estate development</div><div class="m"><a href="mailto:giorgizazadze@gmail.com">giorgizazadze@gmail.com</a> · <a href="https://www.linkedin.com/in/giorgi-zazadze/" target="_blank" rel="noopener">LinkedIn ↗</a> · Tbilisi</div></div>
 <!--__/CLOSE__-->
 </section>
 
@@ -679,11 +680,11 @@ else{addEventListener('resize',fit);fit();
   document.addEventListener('pointerdown',e=>{if(MQM.matches)return;px0=e.clientX;py0=e.clientY;pt0=Date.now();down=true;});
   document.addEventListener('pointerup',e=>{if(!down||MQM.matches)return;down=false;const dx=e.clientX-px0,dy=e.clientY-py0,ax=Math.abs(dx),ay=Math.abs(dy);
    if(ax>40&&ax>ay){closeTips();show(cur+(dx<0?1:-1));return;}                                  /* swipe: always navigates, card goes with the slide */
-   if(Math.max(ax,ay)<10&&Date.now()-pt0<450){if(e.target.closest('.lab,.qhit,#chit,.tip,.qtip,.homeL'))return;   /* taps on interactive things are theirs */
+   if(Math.max(ax,ay)<10&&Date.now()-pt0<450){if(e.target.closest('.lab,.qhit,#chit,.tip,.qtip,.homeL,a'))return;   /* taps on interactive things are theirs */
     if(openTip){closeTips();return;}                                                             /* a tap with a card open only closes the card */
     show(cur+(e.clientX<innerWidth/2?-1:1));}});                                                /* otherwise: tap left half = back, right half = forward */
   document.addEventListener('pointercancel',()=>{down=false;});}
- else document.addEventListener('click',e=>{if(MQM.matches||e.target.closest('.homeL'))return;show(cur+(e.clientX<innerWidth/2?-1:1));});   /* mouse: left half = back, right half = forward */
+ else document.addEventListener('click',e=>{if(MQM.matches||e.target.closest('.homeL,a'))return;show(cur+(e.clientX<innerWidth/2?-1:1));});   /* mouse: left half = back, right half = forward */
  show(fromHashD());MQM.addEventListener('change',e=>{if(!e.matches){show(fromHashD());fit();}});}
 </script>
 <div id="story"></div>
@@ -1064,7 +1065,7 @@ svg{width:100%;height:auto;display:block}
 <section class="sl dark close" data-d="18" data-sec="Close"><div class="in">
  <div class="k a d1">Financial model case study</div>
  <div class="big a d2">Cash flow<br>is <em>king.</em></div>
- <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, project finance, real-estate development</div><div class="m"><a href="mailto:giorgizazadze@gmail.com">giorgizazadze@gmail.com</a> · Tbilisi</div></div>
+ <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, project finance, real-estate development</div><div class="m"><a href="mailto:giorgizazadze@gmail.com">giorgizazadze@gmail.com</a> · Tbilisi · <a href="https://www.linkedin.com/in/giorgi-zazadze/" target="_blank" rel="noopener">LinkedIn ↗</a> </div></div>
 </div></section>
 
 <div id="bb"><span id="sec">Cover</span><div class="nav"><a id="bHome" href="../" aria-label="Back to giorgizazadze.com">⌂</a><button id="bPrev" aria-label="Previous">‹</button><button id="bNext" aria-label="Next">›</button></div></div>

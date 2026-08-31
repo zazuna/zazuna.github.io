@@ -144,6 +144,7 @@ html,body{height:100%;background:var(--desk);overflow:hidden;position:relative;t
 .fn.low{top:996px;width:1560px} .fn b{color:var(--ink);font-weight:600}
 .qtip{position:absolute;width:320px;background:var(--bg);color:var(--ink);border-radius:6px;padding:14px 18px 12px;box-shadow:0 12px 40px rgba(0,0,0,.26);border:1px solid var(--hair);pointer-events:none;opacity:0;transition:opacity .15s;z-index:5}
 .qtip.on{opacity:1} .qhit{cursor:default}
+.close .who .m a{color:var(--gold);text-decoration:none}
 .homeL{position:absolute;left:var(--ml);bottom:26px;z-index:6;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
 .homeL a{display:inline-block;color:var(--navc);text-decoration:none;border:1px solid var(--hair);border-radius:4px;padding:8px 14px;background:transparent}.homeL a:hover{color:var(--gold);border-color:var(--gold)}
 .homeL{display:flex;align-items:center;gap:20px}
@@ -401,7 +402,7 @@ html,body{height:100%;background:var(--desk);overflow:hidden;position:relative;t
 <section class="slide dark close" data-k="">
  <div class="ch"><span>Financial model case study</span><span>Giorgi Zazadze · 2025</span></div>
  <div class="big a d1" style="font-size:120px">Simulate the transaction,<br><em>not the average.</em></div>
- <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, payments &amp; crypto, product economics</div><div class="m">giorgizazadze@gmail.com · Tbilisi</div></div>
+ <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, payments &amp; crypto, product economics</div><div class="m"><a href="mailto:giorgizazadze@gmail.com">giorgizazadze@gmail.com</a> · <a href="https://www.linkedin.com/in/giorgi-zazadze/" target="_blank" rel="noopener">LinkedIn ↗</a> · Tbilisi</div></div>
 </section>
 
 <div class="homeL"><a href="../">⌂ giorgizazadze.com</a><span id="secD"></span></div>
@@ -638,9 +639,9 @@ else{addEventListener('resize',fit);fit();
   document.addEventListener('pointerdown',e=>{if(MQM.matches)return;px0=e.clientX;py0=e.clientY;pt0=Date.now();down=true;});
   document.addEventListener('pointerup',e=>{if(!down||MQM.matches)return;down=false;const dx=e.clientX-px0,dy=e.clientY-py0,ax=Math.abs(dx),ay=Math.abs(dy);
    if(ax>40&&ax>ay){closeTips();show(cur+(dx<0?1:-1));return;}
-   if(Math.max(ax,ay)<10&&Date.now()-pt0<450){if(e.target.closest('.qhit,.qtip'))return;if(openTip){closeTips();document.querySelectorAll('#qtipG.on').forEach(x=>x.classList.remove('on'));return;}if(e.target.closest('.homeL'))return;show(cur+(e.clientX<innerWidth/2?-1:1));}});
+   if(Math.max(ax,ay)<10&&Date.now()-pt0<450){if(e.target.closest('.qhit,.qtip'))return;if(openTip){closeTips();document.querySelectorAll('#qtipG.on').forEach(x=>x.classList.remove('on'));return;}if(e.target.closest('.homeL,a'))return;show(cur+(e.clientX<innerWidth/2?-1:1));}});
   document.addEventListener('pointercancel',()=>{down=false;});}
- else document.addEventListener('click',e=>{if(MQM.matches||e.target.closest('.homeL'))return;show(cur+(e.clientX<innerWidth/2?-1:1));});
+ else document.addEventListener('click',e=>{if(MQM.matches||e.target.closest('.homeL,a'))return;show(cur+(e.clientX<innerWidth/2?-1:1));});
  show(fromHashD());MQM.addEventListener('change',e=>{if(!e.matches){show(fromHashD());fit();}});}
 </script>
 <div id="story"></div>
@@ -1004,7 +1005,7 @@ svg{width:100%;height:auto;display:block}
 <section class="sl dark close" data-d="19" data-sec="Close"><div class="in">
  <div class="k a d1">Financial model case study</div>
  <div class="big a d2" style="font-size:44px">Simulate the transaction, <em>not the average.</em></div>
- <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, payments &amp; crypto, product economics</div><div class="m"><a href="mailto:giorgizazadze@gmail.com">giorgizazadze@gmail.com</a> · Tbilisi</div></div>
+ <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, payments &amp; crypto, product economics</div><div class="m"><a href="mailto:giorgizazadze@gmail.com">giorgizazadze@gmail.com</a> · <a href="https://www.linkedin.com/in/giorgi-zazadze/" target="_blank" rel="noopener">LinkedIn ↗</a> · Tbilisi</div></div>
 </div></section>
 
 <div id="bb"><span id="sec">Cover</span><div class="nav"><a id="bHome" href="../" aria-label="Back to giorgizazadze.com">⌂</a><button id="bPrev" aria-label="Previous">‹</button><button id="bNext" aria-label="Next">›</button></div></div>
