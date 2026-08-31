@@ -146,6 +146,8 @@ html,body{height:100%;background:var(--desk);overflow:hidden;position:relative}
 .qtip.on{opacity:1} .qhit{cursor:default}
 .homeL{position:absolute;left:var(--ml);bottom:26px;z-index:6;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
 .homeL a{display:inline-block;color:var(--navc);text-decoration:none;border:1px solid var(--hair);border-radius:4px;padding:8px 14px;background:transparent}.homeL a:hover{color:var(--gold);border-color:var(--gold)}
+.homeL{display:flex;align-items:center;gap:20px}
+.homeL span{color:var(--navc)}
 @media print{.homeL{display:none}}
 @media (hover:none){#stage{touch-action:none} .qtip.on{pointer-events:auto}}
 @media print{.qtip{display:none}}
@@ -402,7 +404,7 @@ html,body{height:100%;background:var(--desk);overflow:hidden;position:relative}
  <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, payments &amp; crypto, product economics</div><div class="m">giorgizazadze@gmail.com · Tbilisi</div></div>
 </section>
 
-<div class="homeL"><a href="../">⌂ giorgizazadze.com</a></div>
+<div class="homeL"><a href="../">⌂ giorgizazadze.com</a><span id="secD"></span></div>
 </div>
 <script>
 const MQM=matchMedia('(max-width:820px)');
@@ -575,7 +577,7 @@ function MN_(k){const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep',
   +txt(X0+w+16,y+62,i?(r.tag?r.tag:kf(Math.abs(r.delta_k)).replace('GEL ','')+' below base'):'the base every bar is compared to',{fs:13,c:r.tag?G.gold2:G.muted,mono:1});});
  s+=`<line x1="${X0}" x2="${X0}" y1="0" y2="${S.length*rowH}" stroke="${G.muted}"/>`;
  $('#sens').innerHTML=svg(W,S.length*rowH+10,s);
- $('#sensTake').innerHTML=`Retention is the assumption that matters: the card still clears its costs down to <b>${n0(M.sens_be.plans)} paying plans</b> — a ${M.sens_be.dropoff}% drop-off against the ${Math.round(M.dropoff*100)}% modeled. <em>Bitcoin doubling is absorbed by the live reward ladder: the satoshi reward steps down a band, cashback stays near 0.2% of spend.</em>`;})();
+ $('#sensTake').innerHTML=`Retention is the assumption that matters: the card still clears its costs down to <b>${n0(M.sens_be.plans)} paying plans</b> — an ${M.sens_be.dropoff}% drop-off against the ${Math.round(M.dropoff*100)}% modeled. <em>Bitcoin ×2 is absorbed by the live reward ladder — cashback holds near 0.2% of spend.</em>`;})();
 
 /* ---- result ---- */
 (function(){const C=M.cash;$('#resSub').textContent=`Seventy-four monthly periods, ${(M.sim.total/1e6).toFixed(1)} million simulated transactions and two tiers — reduced to the number the shareholder asks for first.`;
@@ -628,7 +630,7 @@ function activate(el){
  const hn=el.querySelector('#heroN');if(hn){hn.dataset.v=M.income;setTimeout(()=>count(hn,RM?0:1100),RM?0:350);}
  const rn=el.querySelector('#resN');if(rn){rn.dataset.v=M.net;setTimeout(()=>count(rn,RM?0:1100),RM?0:350);}
 }
-function show(i){i=Math.max(0,Math.min(S.length-1,i));if(i===cur&&S[cur].classList.contains('cur'))return;if(openTip)closeTips();document.querySelectorAll('#qtipG.on').forEach(x=>x.classList.remove('on'));cur=i;S.forEach((el,j)=>{el.classList.toggle('cur',j===cur);if(j!==cur)el.classList.remove('on');});activate(S[cur]);if(!MQM.matches)try{history.replaceState(null,'','#'+(cur+1));}catch(e){}}
+function show(i){i=Math.max(0,Math.min(S.length-1,i));if(i===cur&&S[cur].classList.contains('cur'))return;if(openTip)closeTips();document.querySelectorAll('#qtipG.on').forEach(x=>x.classList.remove('on'));cur=i;S.forEach((el,j)=>{el.classList.toggle('cur',j===cur);if(j!==cur)el.classList.remove('on');});activate(S[cur]);const sd=document.getElementById('secD');if(sd)sd.textContent=S[cur].dataset.k||(cur===0?'Cover':'Close');if(!MQM.matches)try{history.replaceState(null,'','#'+(cur+1));}catch(e){}}
 if(location.search.includes('print')){S.forEach(el=>{el.classList.add('cur');activate(el);});}
 else{addEventListener('resize',fit);fit();
  addEventListener('keydown',e=>{if(MQM.matches)return;if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(cur+1);}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(cur-1);}else if(e.key==='Home')show(0);else if(e.key==='End')show(S.length-1);});
