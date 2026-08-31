@@ -531,13 +531,14 @@ $('#revT').innerHTML=`What ${n0(M.buildable)} m² <em>becomes</em>`;
  $('#timFn').innerHTML=`<b>Why ${M.terms.initial}% down:</b> Tbilisi has moved from the 2021–24 run-up to a flat, saturated market — developers commonly offer 0%, 10% or 20% down-payments, so 10% is taken as the average. <b>Sales pace</b> is calibrated to Galt &amp; Taggart's survey of established developers: 94% of stock sold at completion for 2025 deliveries, 72% for 2026, 61% for 2027, 45% for 2028–29. Receipts and spend are VAT-inclusive; the ${fmtM(T.vat_net)} net VAT line is output VAT remitted less input VAT recovered.`;})();
 
 /* ---- cash ---- */
+const smooth=pts=>{if(pts.length<3)return 'M'+pts.map(p=>p.join(',')).join('L');let d='M'+pts[0][0].toFixed(1)+','+pts[0][1].toFixed(1);for(let i=0;i<pts.length-1;i++){const p0=pts[Math.max(0,i-1)],p1=pts[i],p2=pts[i+1],p3=pts[Math.min(pts.length-1,i+2)];d+='C'+(p1[0]+(p2[0]-p0[0])/6).toFixed(1)+','+(p1[1]+(p2[1]-p0[1])/6).toFixed(1)+' '+(p2[0]-(p3[0]-p1[0])/6).toFixed(1)+','+(p2[1]-(p3[1]-p1[1])/6).toFixed(1)+' '+p2[0].toFixed(1)+','+p2[1].toFixed(1);}return d;};
 (function(){const C=M.cash,W=G.W,H=460,pl=95,pr=190,pt=18,pb=44,pw=W-pl-pr,ph=H-pt-pb;
  const y=v=>pt+ph*(150-v)/220,t=m=>{const[a,b]=m.split('-');return (a-2024)*12+(b-1);},x=tt=>pl+pw*tt/107;
  let s=`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">`;
  [[-50,'−$50M'],[0,'0'],[50,'$50M'],[100,'$100M'],[150,'$150M']].forEach(g=>{s+=`<line x1="${pl}" y1="${y(g[0])}" x2="${W-pr}" y2="${y(g[0])}" stroke="${g[0]===0?G.ink:G.hair}" stroke-width="${g[0]===0?1.6:1}"/><text x="${pl-12}" y="${y(g[0])+5}" text-anchor="end" font-size="14" fill="${G.muted}" style="${MONO}">${g[1]}</text>`;});
  for(let yy=2024;yy<=2032;yy++)s+=`<text x="${x((yy-2024)*12)}" y="${H-8}" text-anchor="middle" font-size="15" fill="${G.muted}" style="${MONO}">${yy}</text>`;
- const pts=a=>C.months_all.map((m,i)=>`${x(t(m)).toFixed(1)},${y(a[i]).toFixed(1)}`).join(' ');
- s+=`<polyline id="plU" points="${pts(C.unlev_all)}" fill="none" stroke="${G.green}" stroke-width="3" stroke-linejoin="round"/><polyline id="plL" points="${pts(C.lev_all)}" fill="none" stroke="${G.gold2}" stroke-width="3" stroke-linejoin="round"/>`;
+ const P=a=>C.months_all.map((m,i)=>[x(t(m)),y(a[i])]);
+ s+=`<path id="plU" d="${smooth(P(C.unlev_all))}" fill="none" stroke="${G.green}" stroke-width="3" stroke-linejoin="round"/><path id="plL" d="${smooth(P(C.lev_all))}" fill="none" stroke="${G.gold2}" stroke-width="3" stroke-linejoin="round"/>`;
  const ti=C.months_all.indexOf(C.trough_month_key),tx=x(t(C.months_all[ti])),ty=y(C.unlev_all[ti]);
  s+=`<circle class="fade d5" cx="${tx}" cy="${ty}" r="7" fill="${G.trough}" stroke="${G.bg}" stroke-width="2.5"/><text class="fade d5" x="${tx+16}" y="${ty+30}" font-size="17" fill="${G.ink}" style="${MONO}">−${fmtM(Math.abs(M.trough))} · ${M.trough_month}</text>
  <text class="fade d5" x="${x(107)+14}" y="${y(M.closing)+5}" font-size="16" fill="${G.gold2}" style="${MONO}">Levered ${fmtM(M.closing)}</text><text class="fade d5" x="${x(107)+14}" y="${y(M.unlev_end)-2}" font-size="16" fill="${G.green}" style="${MONO}">Unlevered ${fmtM(M.unlev_end)}</text>
@@ -666,7 +667,7 @@ let cur=0;
 function activate(el){
  el.classList.remove('on');void el.offsetWidth;el.classList.add('on');
  el.querySelectorAll('.seg,.sg').forEach((sg,k)=>{sg.style.transitionDelay=RM?'0s':(0.45+k*0.14)+'s';sg.style.width='0px';void sg.offsetWidth;sg.style.width=sg.dataset.w+'px';});
- el.querySelectorAll('polyline[id]').forEach((p,k)=>{p.style.transition='none';p.style.strokeDashoffset=p.getTotalLength();void p.getBoundingClientRect();if(RM){p.style.strokeDashoffset=0;return;}p.style.transition='stroke-dashoffset 1.4s ease '+(0.25+k*0.55)+'s';p.style.strokeDashoffset=0;});
+ el.querySelectorAll('polyline[id],path[id]').forEach((p,k)=>{p.style.transition='none';p.style.strokeDashoffset=p.getTotalLength();void p.getBoundingClientRect();if(RM){p.style.strokeDashoffset=0;return;}p.style.transition='stroke-dashoffset 1.4s ease '+(0.25+k*0.55)+'s';p.style.strokeDashoffset=0;});
  const hn=el.querySelector('#heroN');if(hn){hn.dataset.v=M.gdv;hn.dataset.pre='';hn.dataset.suf='';setTimeout(()=>count(hn,RM?0:1100),RM?0:350);}
  const rn=el.querySelector('#resN');if(rn){rn.dataset.v=M.net_cf;rn.dataset.pre='';rn.dataset.suf='';setTimeout(()=>count(rn,RM?0:1100),RM?0:350);}
  el.querySelectorAll('.num').forEach((n,k)=>setTimeout(()=>count(n,900),RM?0:800+k*180));
@@ -1151,8 +1152,9 @@ $('#revFoot').innerHTML=`Net of VAT the same plan is worth <b>${fmtM(M.gdv_ex)}<
  let s=`<svg viewBox="0 0 ${W} ${H}">`;
  [[-50,'−50'],[0,'0'],[50,'50'],[100,'100'],[150,'150']].forEach(g=>{s+=`<line x1="${pl}" y1="${y(g[0])}" x2="${W-pr}" y2="${y(g[0])}" stroke="${g[0]===0?G.ink:G.hair}" stroke-width="${g[0]===0?1.2:.8}"/><text x="${pl-5}" y="${y(g[0])+3.5}" text-anchor="end" font-size="9" fill="${G.muted}" style="${MONO}">${g[1]}</text>`;});
  for(let yy=2024;yy<=2032;yy+=2)s+=`<text x="${x((yy-2024)*12)}" y="${H-6}" text-anchor="middle" font-size="9" fill="${G.muted}" style="${MONO}">${yy}</text>`;
- const pts=a=>a.map((v,i)=>`${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
- s+=`<polyline class="pl" points="${pts(U)}" fill="none" stroke="${G.green}" stroke-width="2.2" stroke-linejoin="round"/><polyline class="pl" points="${pts(L)}" fill="none" stroke="${G.gold2}" stroke-width="2.2" stroke-linejoin="round"/>`;
+ const smooth=pts=>{if(pts.length<3)return 'M'+pts.map(p=>p.join(',')).join('L');let d='M'+pts[0][0].toFixed(1)+','+pts[0][1].toFixed(1);for(let i=0;i<pts.length-1;i++){const p0=pts[Math.max(0,i-1)],p1=pts[i],p2=pts[i+1],p3=pts[Math.min(pts.length-1,i+2)];d+='C'+(p1[0]+(p2[0]-p0[0])/6).toFixed(1)+','+(p1[1]+(p2[1]-p0[1])/6).toFixed(1)+' '+(p2[0]-(p3[0]-p1[0])/6).toFixed(1)+','+(p2[1]-(p3[1]-p1[1])/6).toFixed(1)+' '+p2[0].toFixed(1)+','+p2[1].toFixed(1);}return d;};
+ const P=a=>a.map((v,i)=>[x(i),y(v)]);
+ s+=`<path class="pl" d="${smooth(P(U))}" fill="none" stroke="${G.green}" stroke-width="2.2" stroke-linejoin="round"/><path class="pl" d="${smooth(P(L))}" fill="none" stroke="${G.gold2}" stroke-width="2.2" stroke-linejoin="round"/>`;
  const ti=U.indexOf(Math.min(...U));
  $('#cashLeg').innerHTML=`<span><i class="line" style="background:${G.gold2}"></i>Levered · ends <b style="font-family:var(--mono);font-weight:500;color:var(--ink)">${fmtM(M.closing)}</b></span><span><i class="line" style="background:${G.green}"></i>Unlevered · ends <b style="font-family:var(--mono);font-weight:500;color:var(--ink)">${fmtM(M.unlev_end)}</b></span>`;
  s+=`<g id="cxg"><line id="cx" x1="0" y1="${pt}" x2="0" y2="${pt+ph}" stroke="${G.ink}" stroke-width="1" stroke-dasharray="3 3"/><circle id="cdU" r="4.5" fill="${G.green}" stroke="${G.bg}" stroke-width="1.5"/><circle id="cdL" r="4.5" fill="${G.gold2}" stroke="${G.bg}" stroke-width="1.5"/></g>`;
