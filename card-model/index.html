@@ -18,7 +18,7 @@
 <style>:root{color-scheme:light}
 :root{--ml:100px;--mr:100px;--cw:1720px;--bg:#F2EEE4;--ink:#24211e;--muted:#6b6154;--muted2:#4a443b;--hair:#CFC7B6;--gold:#C89A3D;--gold2:#96742B;--goldl:#DCBD7C;--char:#292625;--green:#1e3027;--cream:#E8E1D2;--desk:#191512;--grey:#8f8577;--dkhair:#443f39;--dktext:#C9C1B0;--kick:#8a6c2c;--hint:#6b6154;--grid:#E2DBCB;--conn:#E0D5BC;--card:#EAE4D6;--navc:#a89f8d;--char70:rgba(41,38,37,.7);--char0:rgba(41,38,37,0);--serif:"Source Serif 4",serif;--sans:"DM Sans",sans-serif;--mono:"IBM Plex Mono",monospace;--dw:600;--dls:0;--emst:italic;--tileb:3px solid var(--ink);--chb:1px solid var(--hair);--mw:400}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;background:var(--desk);overflow:hidden;position:relative}
+html,body{height:100%;background:var(--desk);overflow:hidden;position:relative;touch-action:manipulation}
 #stage{width:1920px;height:1080px;position:absolute;left:50%;top:50%;background:var(--bg);color:var(--ink);font-family:var(--sans);transform-origin:center;overflow:hidden}
 .slide{position:absolute;inset:0;display:none}
 .frame{position:absolute;inset:0;pointer-events:none}
@@ -487,7 +487,7 @@ function MN_(k){const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep',
  g+=txt(W2+12,Yy(A.plans[A.plans.length-1])+5,`${n0(A.plans[A.plans.length-1])} plans`,{fs:15,c:G.ink,w:600})+txt(W2+12,Yy(A.cards[A.cards.length-1])+5,`${n0(A.cards[A.cards.length-1])} active`,{fs:15,c:G.gold2,w:600});
  const pk=A.plans.indexOf(Math.max(...A.plans)),pkc=A.cards.indexOf(Math.max(...A.cards));
  g+=`<circle class="pop" cx="${X(pk-i0)}" cy="${Yy(A.plans[pk])}" r="6" fill="${G.char}" style="transition-delay:1.2s"/>`+txt(X(pk-i0),Yy(A.plans[pk])-16,`peak ${n0(A.plans[pk])} · ${ym(A.months[pk])}`,{fs:13,a:'middle',c:G.ink,w:600,mono:1});
- g+=`<circle class="pop" cx="${X(pkc-i0)}" cy="${Yy(A.cards[pkc])}" r="6" fill="${G.gold}" style="transition-delay:1.35s"/>`+txt(X(pkc-i0),Yy(A.cards[pkc])+30,`peak ${n0(A.cards[pkc])}`,{fs:13,a:'middle',c:G.gold2,w:600,mono:1});
+ g+=`<circle class="pop" cx="${X(pkc-i0)}" cy="${Yy(A.cards[pkc])}" r="6" fill="${G.gold}" style="transition-delay:1.35s"/>`+txt(X(pkc-i0)-26,Yy(A.cards[pkc])+36,`peak ${n0(A.cards[pkc])}`,{fs:13,a:'middle',c:G.gold2,w:600,mono:1});
  g+=`<line id="cxAct" class="cxline" x1="-9" x2="-9" y1="0" y2="${H}" stroke="${G.muted}" stroke-dasharray="3 3" opacity="0"/><circle id="dotAP" class="cxline" r="5" fill="${G.char}" opacity="0"/><circle id="dotAC" class="cxline" r="5" fill="${G.gold}" opacity="0"/>`;
  xs.forEach((mm,i)=>{const cw=(W2-pad)/(n-1);g+=hit(X(i)-cw/2,0,cw,H,`<div class='h'>${ym(mm)}</div><div class='r'><span>Paying plans</span><b>${n0(A.plans[i0+i])}</b></div><div class='r'><span>Cards in active use</span><b>${n0(A.cards[i0+i])}</b></div>`,'data-cx="cxAct" data-cxx="'+Math.round(X(i))+'" data-dot="dotAP" data-doty="'+Math.round(Yy(A.plans[i0+i]))+'" data-dot2="dotAC" data-doty2="'+Math.round(Yy(A.cards[i0+i]))+'"');});
  $('#actChart').innerHTML=svg(W2,H+40,g);
