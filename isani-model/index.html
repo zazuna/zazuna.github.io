@@ -212,6 +212,9 @@ html,body{height:100%;background:var(--desk);overflow:hidden;position:relative}
 .nav{position:absolute;right:var(--mr);bottom:34px;font-family:var(--mono);font-weight:var(--mw);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--navc)}
 .dark .nav{color:var(--hint)}
 .no-anim *{transition:none!important;animation:none!important}
+.homeL{position:absolute;left:var(--ml);bottom:34px;z-index:6;font-family:var(--mono);font-weight:var(--mw);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.homeL a{color:var(--navc);text-decoration:none}.homeL a:hover{color:var(--gold)}
+@media print{.homeL{display:none}}
 
 
 @media print{
@@ -391,6 +394,7 @@ html,body{height:100%;background:var(--desk);overflow:hidden;position:relative}
 <!--__/CLOSE__-->
 </section>
 
+<div class="homeL"><a href="../">⌂ giorgizazadze.com</a></div>
 </div>
 <script>
 const MQM=matchMedia('(max-width:820px)');
@@ -673,11 +677,11 @@ else{addEventListener('resize',fit);fit();
   document.addEventListener('pointerdown',e=>{if(MQM.matches)return;px0=e.clientX;py0=e.clientY;pt0=Date.now();down=true;});
   document.addEventListener('pointerup',e=>{if(!down||MQM.matches)return;down=false;const dx=e.clientX-px0,dy=e.clientY-py0,ax=Math.abs(dx),ay=Math.abs(dy);
    if(ax>40&&ax>ay){closeTips();show(cur+(dx<0?1:-1));return;}                                  /* swipe: always navigates, card goes with the slide */
-   if(Math.max(ax,ay)<10&&Date.now()-pt0<450){if(e.target.closest('.lab,.qhit,#chit,.tip,.qtip'))return;   /* taps on interactive things are theirs */
+   if(Math.max(ax,ay)<10&&Date.now()-pt0<450){if(e.target.closest('.lab,.qhit,#chit,.tip,.qtip,.homeL'))return;   /* taps on interactive things are theirs */
     if(openTip){closeTips();return;}                                                             /* a tap with a card open only closes the card */
     show(cur+(e.clientX<innerWidth/2?-1:1));}});                                                /* otherwise: tap left half = back, right half = forward */
   document.addEventListener('pointercancel',()=>{down=false;});}
- else document.addEventListener('click',e=>{if(MQM.matches)return;show(cur+(e.clientX<innerWidth/2?-1:1));});   /* mouse: left half = back, right half = forward */
+ else document.addEventListener('click',e=>{if(MQM.matches||e.target.closest('.homeL'))return;show(cur+(e.clientX<innerWidth/2?-1:1));});   /* mouse: left half = back, right half = forward */
  show(fromHashD());MQM.addEventListener('change',e=>{if(!e.matches){show(fromHashD());fit();}});}
 </script>
 <div id="story"></div>
@@ -697,6 +701,8 @@ body.dk{background:var(--char)}
 #bb .nav{display:flex;gap:6px}
 #bb button{width:42px;height:32px;border:1px solid var(--hair);background:transparent;color:var(--ink);font-size:17px;line-height:1;border-radius:4px;font-family:var(--serif);cursor:pointer}
 #bb button:disabled{opacity:.3}
+#bb .nav a{display:flex;align-items:center;justify-content:center;width:42px;height:32px;border:1px solid var(--hair);border-radius:4px;color:var(--muted);text-decoration:none;font-size:16px;line-height:1}
+.dk #bb .nav a{border-color:var(--dkhair);color:var(--grey)}
 .dk #tb,.dk #bb{color:var(--grey)} .dk #prog i{background:var(--dkhair)} .dk #prog i.done{background:var(--gold)} .dk #bb button{border-color:var(--dkhair);color:var(--cream)}
 /* slides */
 .sl{position:absolute;inset:0;background:var(--bg);opacity:0;pointer-events:none;transform:translateX(var(--dx,30px));transition:opacity .38s ease,transform .38s ease}
@@ -1059,7 +1065,7 @@ svg{width:100%;height:auto;display:block}
  <div class="who a d3"><div class="n">Giorgi Zazadze</div><div class="r">Group CFO, Fulcrum Holding · financial modeling, project finance, real-estate development</div><div class="m"><a href="mailto:giorgizazadze@gmail.com">giorgizazadze@gmail.com</a> · Tbilisi</div></div>
 </div></section>
 
-<div id="bb"><span id="sec">Cover</span><div class="nav"><button id="bPrev" aria-label="Previous">‹</button><button id="bNext" aria-label="Next">›</button></div></div>
+<div id="bb"><span id="sec">Cover</span><div class="nav"><a id="bHome" href="../" aria-label="Back to giorgizazadze.com">⌂</a><button id="bPrev" aria-label="Previous">‹</button><button id="bNext" aria-label="Next">›</button></div></div>
 </div>
 </template>
 <script>(function(){const root=document.getElementById('story').attachShadow({mode:'open'});root.appendChild(document.getElementById('mtpl').content.cloneNode(true));const MQ=matchMedia('(max-width:820px)');
