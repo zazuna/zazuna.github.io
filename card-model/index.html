@@ -144,8 +144,8 @@ html,body{height:100%;background:var(--desk);overflow:hidden;position:relative}
 .fn.low{top:996px;width:1560px} .fn b{color:var(--ink);font-weight:600}
 .qtip{position:absolute;width:320px;background:var(--bg);color:var(--ink);border-radius:6px;padding:14px 18px 12px;box-shadow:0 12px 40px rgba(0,0,0,.26);border:1px solid var(--hair);pointer-events:none;opacity:0;transition:opacity .15s;z-index:5}
 .qtip.on{opacity:1} .qhit{cursor:default}
-.homeL{position:absolute;left:var(--ml);bottom:34px;z-index:6;font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
-.homeL a{color:var(--navc);text-decoration:none}.homeL a:hover{color:var(--gold)}
+.homeL{position:absolute;left:var(--ml);bottom:26px;z-index:6;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
+.homeL a{display:inline-block;color:var(--navc);text-decoration:none;border:1px solid var(--hair);border-radius:4px;padding:8px 14px;background:transparent}.homeL a:hover{color:var(--gold);border-color:var(--gold)}
 @media print{.homeL{display:none}}
 @media (hover:none){#stage{touch-action:none} .qtip.on{pointer-events:auto}}
 @media print{.qtip{display:none}}
@@ -474,7 +474,7 @@ function MN_(k){const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep',
 /* ---- retention ---- */
 (function(){$('#retSub').textContent=`The model does not assume that a sign-up is a customer. ${Math.round(M.dropoff*100)}% of new cards are dropped after their first period (annual plans at renewal), and only ${Math.round(M.active_rate*100)}% of those that stay are counted as transacting. Subscriptions are earned on the retained base; fee revenue on the active one.`;
  const rows=[['Cards issued',M.issued,G.hair,'paid for · production, delivery, scheme fees'],['Paying plans retained',M.retained,G.char,`${Math.round((1-M.dropoff)*100)}% stay · subscriptions earned here`],['Cards in active use',M.active,G.gold,`${Math.round(M.active_rate*100)}% of retained · fee revenue earned here`]];
- const W=640,bh=74;let s='';rows.forEach((r,i)=>{const y=i*130,w=r[1]/M.issued*W;s+=`<rect class="grow" x="0" y="${y}" width="${w}" height="${bh}" rx="6" fill="${r[2]}" style="${D(i*3)}"/>`+txt(0,y+bh+26,r[0],{fs:19,c:G.ink,w:700})+txt(0,y+bh+50,r[3],{fs:14})+txt(w+16,y+bh/2+9,n0(r[1]),{fs:30,c:G.ink,w:600})
+ const W=640,bh=74;let s='';rows.forEach((r,i)=>{const y=i*130,w=r[1]/M.issued*W;s+=`<rect class="grow" x="0" y="${y}" width="${w}" height="${bh}" rx="6" fill="${r[2]}" style="${D(i*3)}"/>`+txt(0,y+bh+26,r[0],{fs:19,c:G.ink,w:700})+txt(0,y+bh+50,r[3],{fs:14})+(w+120>W?txt(w-20,y+bh/2+9,n0(r[1]),{fs:30,c:G.ink,w:600,a:'end'}):txt(w+16,y+bh/2+9,n0(r[1]),{fs:30,c:G.ink,w:600}))
   +hit(0,y,W,bh,`<div class='h'>${r[0]}</div><div class='r'><span>Cards</span><b>${n0(r[1])}</b></div><div class='n'>${r[3]}</div>`);});
  $('#funnel').innerHTML=svg(700,400,s);
  const A=M.act,W2=680,H=360,pad=60,i0=A.months.indexOf('2025-04'),xs=A.months.slice(i0),n=xs.length,mx=Math.max(...A.plans)*1.12,X=i=>pad+(W2-pad)*i/(n-1),Yy=v=>H-v/mx*H;
@@ -617,7 +617,7 @@ $('#know').innerHTML=`<div class="h"><span>What it took to know</span></div>`+[[
 /* ---- chrome numbering + nav ---- */
 const S=[...document.querySelectorAll('.slide')];
 S.forEach((el,i)=>{const k=el.dataset.k;if(k!==undefined&&k!==''&&!el.classList.contains('cv')&&!el.classList.contains('close')){const c=document.createElement('div');c.className='ch';c.innerHTML=`<span>${k}</span><span>${String(i+1).padStart(2,'0')} · ${S.length}</span>`;el.prepend(c);}
- if(!el.classList.contains('cv')){const nv=document.createElement('div');nv.className='nav';const hasQ=!!el.querySelector('.qhit');nv.textContent=TOUCH?(hasQ?'tap a chart for detail · swipe to navigate':'swipe to navigate'):(hasQ?'hover the charts for detail · ← → or click':'← → or click · left back, right forward');el.appendChild(nv);}});
+ if(!el.classList.contains('cv')){const nv=document.createElement('div');nv.className='nav';const hasQ=!!el.querySelector('.qhit');nv.textContent=TOUCH?(hasQ?'tap a chart for detail · swipe to navigate':'swipe to navigate'):(hasQ?'hover the charts · ← → or click · left back, right forward':'← → or click · left back, right forward');el.appendChild(nv);}});
 function count(el,ms){const v=Math.abs(+el.dataset.v),pre=el.dataset.pre||'',suf=el.dataset.suf||'';if(RM||!ms){el.textContent=pre+v.toFixed(2)+suf;return;}
  const t0=performance.now();(function fr(t){const k=Math.min(1,(t-t0)/ms),e=1-Math.pow(1-k,3);el.textContent=pre+(v*e).toFixed(2)+suf;if(k<1)requestAnimationFrame(fr);})(t0);}
 function fit(){const s=Math.min(innerWidth/1920,innerHeight/1080);$('#stage').style.transform='translate(-50%,-50%) scale('+s+')';}
