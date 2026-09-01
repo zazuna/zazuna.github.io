@@ -1,0 +1,5 @@
+# giorgizazadze.com — all crawlers welcome, including AI search crawlers.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.giorgizazadze.com/sitemap.xml
