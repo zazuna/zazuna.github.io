@@ -573,10 +573,11 @@ function overlay(el,cfg){const O=M.ov,n=O.months.length;
  s+=txt(PR+14,Y(cfg.mod[n-1])+cfg.offM,'modeled '+cfg.fmtE(cfg.mod[n-1]),{fs:15,c:G.ink,w:600,mono:1});
  s+=txt(PR+14,Y(cfg.act[n-1])+cfg.offA,'actual '+cfg.fmtE(cfg.act[n-1]),{fs:15,c:G.gold2,w:600,mono:1});
  s+=`<line id="cx${el}" class="cxline" x1="-9" x2="-9" y1="${TOP}" y2="${TOP+H}" stroke="${G.muted}" stroke-dasharray="3 3" opacity="0"/><circle id="d1${el}" class="cxline" r="5.5" fill="${G.char}" opacity="0"/><circle id="d2${el}" class="cxline" r="5.5" fill="${G.gold}" opacity="0"/>`;
+ if(cfg.avg)s+=`<circle id="d3${el}" class="cxline" r="4.5" fill="${G.muted}" opacity="0"/>`;
  const cw=(PR-pad)/(n-1);
  O.months.forEach((k,i)=>{const gap=cfg.act[i]/cfg.mod[i]-1;
   s+=hit(X(i)-cw/2,TOP,cw,H,`<div class='h'>${ym(k)}</div><div class='r'><span>${cfg.labM}</span><b>${cfg.fmtE(cfg.mod[i])}</b></div><div class='r'><span>${cfg.labA}</span><b>${cfg.fmtE(cfg.act[i])}</b></div>${cfg.avg?`<div class='r'><span>${cfg.labV}</span><b>${cfg.fmtE(cfg.avg[i])}</b></div>`:''}<div class='r'><span>Actual against modeled</span><b>${gap>=0?'+':'−'}${Math.abs(gap*100).toFixed(0)}%</b></div>`,
-   'data-cx="cx'+el+'" data-cxx="'+Math.round(X(i))+'" data-dot="d1'+el+'" data-doty="'+Math.round(Y(cfg.mod[i]))+'" data-dot2="d2'+el+'" data-doty2="'+Math.round(Y(cfg.act[i]))+'"');});
+   'data-cx="cx'+el+'" data-cxx="'+Math.round(X(i))+'" data-dot="d1'+el+'" data-doty="'+Math.round(Y(cfg.mod[i]))+'" data-dot2="d2'+el+'" data-doty2="'+Math.round(Y(cfg.act[i]))+'"'+(cfg.avg?' data-dot3="d3'+el+'" data-doty3="'+Math.round(Y(cfg.avg[i]))+'"':''));});
  $('#'+el).innerHTML=svg(W,TOP+H+44,s);}
 
 /* ---- 11 · backtest · difficulty ---- */
@@ -614,7 +615,7 @@ function overlay(el,cfg){const O=M.ov,n=O.months.length;
   <div class="r tot"><span>Revenue after power</span><span>${mUSD(R.gross)}</span></div>`;
  $('#btpBox').innerHTML=`<div class="k">Replay assumptions</div>
   <p>Closed-form expected mining on actual daily difficulty: constant fleet, full uptime, block reward <span class="mn">${R.reward}</span> (the ${M.assum.halving.split(' ')[1]==='2020'?'2024':'next'} halving falls outside the window), pool fee <span class="mn">${(R.pool*100).toFixed(0)}%</span>, transaction fees excluded, power at <span class="mn">$${R.elec.toFixed(2)}/kWh</span>. Fees excluded and uptime idealised pull in opposite directions; other operating costs are left out, so the comparison is made at revenue level.</p>`;
- $('#btpFn').textContent=SRC;
+ $('#btpFn').textContent=SRC+' \u00b7 200-day avg: trailing mean of the daily series \u2014 the market\u2019s standard long-horizon trend line';
  $('#btpTake').innerHTML=`Same fleet, same days, real market: <b>${M.ratios.revenue}× the modeled revenue</b>. <em>The gap is the price of prudence — paid forward, not lost.</em>`;})();
 
 /* ---- 13 · the verdict ---- */
@@ -648,7 +649,8 @@ function overlay(el,cfg){const O=M.ov,n=O.months.length;
   if(h.dataset.cx){const l=sv.querySelector('#'+h.dataset.cx);if(l){l.setAttribute('x1',h.dataset.cxx);l.setAttribute('x2',h.dataset.cxx);l.setAttribute('opacity',1);}}
   if(h.dataset.hl){const b=sv.querySelector('#'+h.dataset.hl);if(b){b.setAttribute('x',h.getAttribute('x'));b.setAttribute('width',h.getAttribute('width'));b.setAttribute('opacity',1);}}
   if(h.dataset.dot){const d=sv.querySelector('#'+h.dataset.dot);if(d){d.setAttribute('cx',h.dataset.cxx);d.setAttribute('cy',h.dataset.doty);d.setAttribute('opacity',1);}}
-  if(h.dataset.dot2){const d=sv.querySelector('#'+h.dataset.dot2);if(d){d.setAttribute('cx',h.dataset.cxx);d.setAttribute('cy',h.dataset.doty2);d.setAttribute('opacity',1);}}};
+  if(h.dataset.dot2){const d=sv.querySelector('#'+h.dataset.dot2);if(d){d.setAttribute('cx',h.dataset.cxx);d.setAttribute('cy',h.dataset.doty2);d.setAttribute('opacity',1);}}
+  if(h.dataset.dot3){const d=sv.querySelector('#'+h.dataset.dot3);if(d){d.setAttribute('cx',h.dataset.cxx);d.setAttribute('cy',h.dataset.doty3);d.setAttribute('opacity',1);}}};
  st.addEventListener('pointermove',e=>{if(TOUCH)return;const h=e.target.closest('.qhit');cxAll();if(h){showT(h,pos(e));cxOn(h);}else t.classList.remove('on');});
  st.addEventListener('pointerdown',e=>{if(!TOUCH)return;const h=e.target.closest('.qhit');if(!h)return;e.stopPropagation();if(openTip===h){t.classList.remove('on');cxAll();openTip=null;return;}showT(h,pos(e));cxAll();cxOn(h);openTip=h;},true);
 })();
@@ -1212,9 +1214,9 @@ function overlay(el,cfg){const O=M.ov,n=O.months.length,H=cfg.H||198,pad=cfg.pad
  s+=`<path class="pl" d="${smooth(cfg.mod.map((v,i)=>[X(i),Y(v)]))}" fill="none" stroke="${G.char}" stroke-width="2.2" stroke-linejoin="round"/>`;
  s+=`<path class="pl" d="${smooth(cfg.act.map((v,i)=>[X(i),Y(v)]))}" fill="none" stroke="${G.gold}" stroke-width="2.4" stroke-linejoin="round"/>`;
  s+=`<line id="cx${el}" x1="${X(n-1).toFixed(1)}" x2="${X(n-1).toFixed(1)}" y1="0" y2="${H}" stroke="${G.muted}" stroke-dasharray="3 3" stroke-width="1"/>`
-  +`<circle id="d1${el}" cx="${X(n-1).toFixed(1)}" cy="${Y(cfg.mod[n-1]).toFixed(1)}" r="4" fill="${G.char}"/><circle id="d2${el}" cx="${X(n-1).toFixed(1)}" cy="${Y(cfg.act[n-1]).toFixed(1)}" r="4" fill="${G.gold}"/>`;
+  +`<circle id="d1${el}" cx="${X(n-1).toFixed(1)}" cy="${Y(cfg.mod[n-1]).toFixed(1)}" r="4" fill="${G.char}"/><circle id="d2${el}" cx="${X(n-1).toFixed(1)}" cy="${Y(cfg.act[n-1]).toFixed(1)}" r="4" fill="${G.gold}"/>`+(cfg.avg?`<circle id="d3${el}" cx="${X(n-1).toFixed(1)}" cy="${Y(cfg.avg[n-1]).toFixed(1)}" r="3.2" fill="${G.muted}"/>`:``);
  $('#'+el).innerHTML=svg(W,H+18,s);
- window['__'+el]={pad,n,w:PR,ys1:cfg.mod.map(v=>Y(v)),ys2:cfg.act.map(v=>Y(v))};}
+ window['__'+el]={pad,n,w:PR,ys1:cfg.mod.map(v=>Y(v)),ys2:cfg.act.map(v=>Y(v)),ys3:cfg.avg?cfg.avg.map(v=>Y(v)):null};}
 
 /* ---- 14 · backtest · difficulty ---- */
 (function(){const O=M.ov,n=O.months.length,mo=M.modeled,ac=M.actual;
@@ -1231,12 +1233,12 @@ function overlay(el,cfg){const O=M.ov,n=O.months.length,H=cfg.H||198,pad=cfg.pad
 (function(){const O=M.ov,n=O.months.length,mo=M.modeled,ac=M.actual;
  $('#btpSub').textContent=`The other dial went the other way. The model carried Bitcoin from ${usd(M.engine.prc0)} to ${usd(mo.prc_end)}; the market ended the window at ${usd(ac.prc_end)}.`;
  overlay('btpChart',{mod:O.mod_prc,act:O.act_prc,avg:O.prc_ma,fmt:v=>'$'+n0(v/1000)+'k',pad:38});
- window.selBtp=i=>{const g=window.__btpChart;['d1btpChart','d2btpChart'].forEach((id,j)=>{const d=$('#'+id);if(d)d.setAttribute('cy',(j?g.ys2:g.ys1)[i]);});
+ window.selBtp=i=>{const g=window.__btpChart;['d1btpChart','d2btpChart','d3btpChart'].forEach((id,j)=>{const d=$('#'+id);if(d)d.setAttribute('cy',(j==2?g.ys3:j?g.ys2:g.ys1)[i]);});
   const gap=O.act_prc[i]/O.mod_prc[i]-1;
   $('#btpCard').innerHTML=`<div class="hd"><span>${ym(O.months[i])}</span></div><div class="g"><div><span><i style="background:${G.char}"></i>Modeled</span><b>${usd(O.mod_prc[i])}</b></div><div><span><i style="background:${G.gold}"></i>Actual</span><b>${usd(O.act_prc[i])}</b></div><div><span><i style="background:${G.muted}"></i>200-day avg</span><b>${usd(O.prc_ma[i])}</b></div><div><span>Actual vs modeled</span><b>${gap>=0?'+':'−'}${Math.abs(gap*100).toFixed(0)}%</b></div></div>`;};
  selBtp(n-1);
  $('#btpTake').innerHTML=`Price ended <b>${Math.round((ac.prc_end/mo.prc_end-1)*100)}% above</b> the modeled path. <em>Both dials were wrong in the model's own disfavour.</em>`;
- $('#btpSrc').textContent=M.src.prc;})();
+ $('#btpSrc').textContent=M.src.prc+' · 200-day avg: the market\u2019s standard long-horizon trend line';})();
 
 /* ---- 16 · the replay ---- */
 (function(){const mo=M.modeled,ac=M.actual,R=M.replay;
