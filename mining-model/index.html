@@ -1115,7 +1115,7 @@ function scale(mx,mult){const raw=mx*(mult||1.08),K=[1,1.5,2,2.5,3,4,5,6,8,10];
  $('#engTake').innerHTML=`A ${M.assum.diff_step}% step every fortnight compounds to <b>${(E.diff_end/E.diff0).toFixed(1)}×</b> in four years. <em>That compounding is the whole downside case.</em>`;})();
 
 /* ---- horizontal ranking bars ---- */
-function ladder(el,rows,cfg){const rh=cfg.rh||38,X0=cfg.x0||86,XW=W-X0-cfg.vw,mx=Math.max(...rows.map(r=>r.v))*1.02;
+function ladder(el,rows,cfg){const rh=cfg.rh||38,X0=(cfg.x0||86)+(cfg.tap?8:0),XW=W-X0-cfg.vw,mx=Math.max(...rows.map(r=>r.v))*1.02;
  let s=txt(0,-5,cfg.title,{fs:8.5,mono:1,w:500});
  if(cfg.tap)s+=`<rect id="${el}Hl" x="0" y="5" width="${W}" height="27" rx="6" fill="${G.ink}" fill-opacity="0.07" opacity="0"/>`;
  window['__'+el+'L']={rh,y0:6};
