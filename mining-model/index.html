@@ -1120,7 +1120,7 @@ function ladder(el,rows,cfg){const rh=cfg.rh||38,X0=cfg.x0||86,XW=W-X0-cfg.vw,mx
  if(cfg.tap)s+=`<rect id="${el}Hl" x="0" y="5" width="${W}" height="27" rx="6" fill="${G.ink}" fill-opacity="0.07" opacity="0"/>`;
  window['__'+el+'L']={rh,y0:6};
  rows.forEach((r,i)=>{const y=6+i*rh,w=Math.max(r.v/mx*XW,1);
-  s+=txt(0,y+17,r.name,{fs:11,c:G.ink,w:r.pick?700:400})
+  s+=txt(cfg.tap?7:0,y+17,r.name,{fs:11,c:G.ink,w:r.pick?700:400})
    +`<rect class="grow" x="${X0}" y="${y+3}" width="${w.toFixed(1)}" height="19" rx="3" fill="${r.pick?G.gold:G.neutral}" style="transition-delay:${(0.3+i*0.05).toFixed(2)}s"/>`
    +txt(X0+w+7,y+17,r.lab,{fs:10,c:G.ink,w:600,mono:1})
    +(cfg.tap?`<rect class="yhit" data-y="${r.i}" x="0" y="${y}" width="${W}" height="${rh}" fill="transparent"/>`:'');});
