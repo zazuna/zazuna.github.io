@@ -801,8 +801,8 @@ svg{width:100%;height:auto;display:block}
 .stacklab{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:9px} .stacklab .n{font-size:11px;font-weight:700;line-height:1.25} .stacklab .n i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px} .stacklab .v{font-family:var(--serif);font-weight:600;font-size:18px;margin-top:2px} .stacklab .v small{display:block;font-family:var(--mono);font-size:8px;letter-spacing:.03em;color:var(--grey);font-weight:400;margin-top:2px;line-height:1.35}
 /* close */
 .close .big{font-family:var(--serif);font-weight:600;font-size:44px;line-height:1.04;color:var(--cream);margin-top:24px} .close .big em{font-style:italic;color:var(--gold)}
-.close .arc{margin-top:20px} .close .arc>div{border-top:1px solid var(--dkhair);padding:9px 0} .close .arc .y{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)} .close .arc .n{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--cream);margin:3px 0 2px} .close .arc .d{font-size:12px;line-height:1.42;color:var(--dktext)}
-.close .who{border-top:1px solid var(--dkhair);padding-top:14px;margin-top:auto} .close .epi{font-size:12.5px;line-height:1.55;color:var(--dktext);margin:14px 0}
+.close .arc{margin-top:12px} .close .arc>div{border-top:1px solid var(--dkhair);padding:7px 0} .close .arc .y{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)} .close .arc .n{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--cream);margin:3px 0 2px} .close .arc .d{font-size:12px;line-height:1.42;color:var(--dktext)}
+.close .who{border-top:1px solid var(--dkhair);padding-top:14px;margin-top:auto} .close .epi{font-size:12.5px;line-height:1.55;color:var(--dktext);margin:8px 0 6px}
 .who .n{font-family:var(--serif);font-weight:600;font-size:23px} .close .who .r{font-size:13px;color:var(--dktext);margin-top:4px;line-height:1.45} .close .who .m{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-top:11px;line-height:1.7}
 .close a{color:var(--gold);text-decoration:none}
 @media (prefers-reduced-motion:reduce){.a,.grow,.growy,.fade,.bar i,.sl{transition:none!important;opacity:1;transform:none}.sl:not(.cur){opacity:0}}
@@ -1292,9 +1292,9 @@ function overlay(el,cfg){const O=M.ov,n=O.months.length,H=cfg.H||198,pad=cfg.pad
 
 /* ---- 19 · close ---- */
 (function(){$('#clMeta').textContent=`Model as of ${M.built} · backtested ${M.memo_date}`;
- $('#clArc').innerHTML=[['Real estate','Project finance','Development budgets, draw schedules and the debt that funds them.'],
+ $('#clArc').innerHTML=[['Real estate','Project finance','Draw schedules and the debt that funds them.'],
   ['Payments','Product economics','Card and wallet P&amp;Ls built transaction by transaction.'],
-  ['Mining','Commodity economics',`A hash-rate fleet priced against two dials nobody can forecast — and an ${M.built} model checked, six years later, against what happened.`]]
+  ['Mining','Commodity economics',`An ${M.built} fleet model, checked six years later against what happened.`]]
   .map(a=>`<div><div class="y">${a[0]}</div><div class="n">${a[1]}</div><div class="d">${a[2]}</div></div>`).join('');})();
 
 /* ---- stage: fit, navigate, reveal ---- */
